@@ -135,4 +135,8 @@ body {
   .answer-box {
     grid-template-columns: 1fr
   }
+
+  .answer-button {
+    font-size: 1.1em
+  }
 }
