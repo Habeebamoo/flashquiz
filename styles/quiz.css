@@ -137,6 +137,7 @@ body {
   }
 
   .answer-button {
-    font-size: 1.1em
+    font-size: 1.2em
+    margin-bottom: 5px;
   }
 }
