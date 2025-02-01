@@ -64,6 +64,10 @@ main {
   gap: 20px;
 }
 
+.leadboard div {
+  padding: 10px;
+}
+
 article {
   color: white;
   padding: 20px;
