@@ -11,7 +11,10 @@
 ## 🛠️ Built With  
 - **JavaScript** (No backend, fully client-side)  
 - **HTML & CSS**  
-- **Open Trivia API** for fetching questions  
+- **Open Trivia API** for fetching questions
+
+## Link
+https://flashquizweb.netlify.app
 
 ## 📦 Installation & Usage  
 1. Clone the repository:  
