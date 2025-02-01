@@ -130,3 +130,9 @@ body {
 .nxt-btn:hover {
   max-height: 80%;
 }
+
+@media (max-width: 600px) {
+  .answer-box {
+    grid-template-columns: 1fr
+  }
+}
