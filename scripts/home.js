@@ -37,8 +37,7 @@ function renderProfile() {
     const username = profile.user;
     const gender = profile.gender;
     const category = profile.category;
-    console.log(gender)
-
+    
     dashboardHtml = `
       <div class="leadboard">
         <div class="user-image">
@@ -47,7 +46,7 @@ function renderProfile() {
         <div>
           <h2>Category: <span class="blue-text">${category}</span></h2>
           <h3>No. of Questions: <span class="blue-text">25</span><h2>
-          <h3>Time Available: <span class="blue-text">5mins</span></h3>
+          <h3>Time Available: <span class="blue-text">7mins</span></h3>
         </div>
       </div>
       <div class="profile">
@@ -86,7 +85,7 @@ const accordion = [
   {
       header: 'Will there be a countdown',
       id: '001',
-      body: 'Yes, there is a 5 minute countdown for each quiz session, as designed to improve users speed and efficiency'
+      body: 'Yes, there is a 7 minute countdown for each quiz session, as designed to improve users speed and efficiency'
   }, {
       header: 'Are the questions real',
       id: '002',
