@@ -131,7 +131,7 @@ function saveScore() {
 
 let milsec = 59;
 let secs = 59;
-let mins =  5;
+let mins =  6;
 
 function stopWatch() {
   milsec--;
