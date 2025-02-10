@@ -58,11 +58,6 @@ body {
   color: #ff512f;
 }
 
-.question-marker {
-  text-align: center;
-  font-family: sans-serif;
-}
-
 .question-screen-cont {
   display: flex;
   justify-content: center;
@@ -118,13 +113,23 @@ body {
   padding: 8px;
 }
 
+.footer {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 10px;
+}
+
+.question-marker {
+  text-align: left;
+  font-family: sans-serif;
+}
+
 .navigation {
   margin-top: 20px;
   height: 40px;
   display: flex;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
-  background: red;
 }
 
 .nxt-btn {
