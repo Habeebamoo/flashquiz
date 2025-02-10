@@ -105,9 +105,9 @@ body {
 
 .answer-button {
   width: 100%;
-  padding: 20px;
+  padding: 10px;
   border-radius: 7px;
-  border: 5px solid #1845ad;
+  border: 3px solid #1845ad;
   background-color: transparent;
   color: white;
   font-size: 1em;
@@ -124,6 +124,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background: red;
 }
 
 .nxt-btn {
@@ -141,8 +142,7 @@ body {
   }
 
   .answer-button {
-    font-size: 1.2em;
-    padding: 10px;
+    padding: 20px;
     margin-bottom: 5px;
   }
 }
