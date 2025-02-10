@@ -58,7 +58,7 @@ function renderQuiz() {
     <div class="footer">
       <div class="question-marker">
         <h3>Question <span class="question-marker-span">${quizArray + 1}</span> of 25</h3>
-      <div>
+      </div>
       <div class="navigation">
         <img src="./assets/next.png" class="nxt-btn">
       </div>
