@@ -143,6 +143,10 @@ body {
 }
 
 @media (max-width: 600px) {
+  .quiz-box {
+    width: 90%;
+  }
+  
   .answer-box {
     grid-template-columns: 1fr;
   }
