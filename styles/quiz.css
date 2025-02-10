@@ -70,7 +70,7 @@ body {
 }
 
 .question-screen {
-  width: 300px;
+ /* width: 300px;
   height: 150px;
   background-color: white;
   border-radius: 10px;
@@ -79,7 +79,8 @@ body {
 
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center;*/
+  color: white;
   font-size: 1.2em;
   font-family: sans-serif;
   padding: 20px;
@@ -103,16 +104,17 @@ body {
 
 .answer-button {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   border-radius: 5px;
   border: none;
   background-color:#1845ad;
   color: white;
+  font-size: 1em;
 }
 
 .answer-button:hover {
   background-color:#153580;
-  padding: 6px;
+  padding: 8px;
 }
 
 .navigation {
