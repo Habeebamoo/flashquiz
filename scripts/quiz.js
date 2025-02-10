@@ -47,9 +47,6 @@ function renderQuiz() {
   quiz = data[quizArray];
 
   quizHtml = `
-    <div class="question-marker">
-      <h3>Question <span class="question-marker-span">${quizArray + 1}</span> of 25</h3>
-    <div>
     <div class="question-screen-cont">
       <div class="question-screen">
         <p>${quiz.question}</p>
@@ -58,8 +55,13 @@ function renderQuiz() {
     <div class="answer-box">
       ${getOptions(quiz)}
     </div>
-    <div class="navigation">
-      <img src="./assets/next.png" class="nxt-btn">
+    <div class="footer">
+      <div class="question-marker">
+        <h3>Question <span class="question-marker-span">${quizArray + 1}</span> of 25</h3>
+      <div>
+      <div class="navigation">
+        <img src="./assets/next.png" class="nxt-btn">
+      </div>
     </div>
   `;
 
