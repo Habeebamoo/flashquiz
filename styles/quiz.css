@@ -112,6 +112,7 @@ body {
 
 .answer-button:hover {
   background-color:#153580;
+  padding: 6px;
 }
 
 .navigation {
