@@ -1,0 +1,158 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #080710; 
+}
+
+.quiz-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quiz-box {
+  width: 400px;
+  color: white;
+  padding: 30px;
+  background-color: rgba(255,255,255,0.13);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255,255,255,0.1);
+  border-radius: 10px;
+  animation: quizbox 1.5s;
+}
+
+@keyframes quizbox {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.count-down {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stopwatch {
+  color: white;
+  font-family: sans-serif;
+}
+
+.image-cont {
+  height: 40px;
+}
+
+.image-cont img  {
+  max-height: 100%;
+}
+
+.red-text {
+  color: #ff512f;
+}
+
+.question-screen-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.question-screen {
+ /* width: 300px;
+  height: 150px;
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 10px;
+  color: black;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;*/
+  color: white;
+  font-size: 1.2em;
+  font-family: sans-serif;
+  padding: 10px;
+  text-align: left;
+}
+
+.question-screen p {
+  animation: animateQuestion 2s;
+}
+
+@keyframes animateQuestion {
+  from { opacity: 0}
+  to { opacity: 1 }
+}
+
+.answer-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.answer-button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 7px;
+  border: 3px solid #1845ad;
+  background-color: transparent;
+  color: white;
+  font-size: 1em;
+}
+
+.answer-button:hover {
+  background-color:#153580;
+  padding: 8px;
+}
+
+.footer {
+  margin-top: 15px;
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.question-marker {
+  text-align: left;
+  font-family: sans-serif;
+}
+
+.navigation {
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nxt-btn {
+  max-height: 100%;
+  cursor: pointer;
+}
+
+.nxt-btn:hover {
+  max-height: 80%;
+}
+
+@media (max-width: 600px) {
+  .quiz-box {
+    width: 95%;
+  }
+  
+  .answer-box {
+    grid-template-columns: 1fr;
+  }
+
+  .answer-button {
+    padding: 20px;
+    margin-bottom: 5px;
+  }
+}

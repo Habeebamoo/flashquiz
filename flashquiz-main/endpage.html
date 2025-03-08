@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FlashQuiz</title>
+  <link rel="stylesheet" href="./styles/endpage.css">
+</head>
+<body>
+  <main>
+    <div class="dashboard">
+      <div class="card">
+        
+      </div>
+    </div>
+    <div class="info">
+      <div class="action-group">
+        <h2>Farewell</h2>
+        <p class="fmessage"></p>
+        <div class="action-btn">
+          <button class="restart-quiz">Restart</button>
+          <button class="end-quiz">End Quiz</button>
+        </div>
+      </div>
+      <form class="form" action="https://getform.io/f/adrrejpa" method="POST">
+        <h2>Feedback</h2>
+        <p>We would love a Feedback from you so we can improve on the platform</p>
+        <div class="form-box">
+          <label for="username">Username</label>
+          <input name="username" id="username" disabled>
+
+          <label for="email">E-mail</label>
+          <input name="email" id="email">
+
+          <label for="message">Message</label>
+          <textarea name="message" id="message" cols="30" rows="5"></textarea>
+
+          <div class="button-area">
+            <button type="submit">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <div class="end-quiz-modal">
+    <div class="quiz-modal">
+      <h2>Goodbye</h2>
+      <p>Thanks for your time! We hope to see you again</p>
+      <div class="end-quiz-cont">
+        <button class="confirm-btn"><a href="./index.html">Ok</a></button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./scripts/endpage.js" type="module"></script>
+</body>
+</html>

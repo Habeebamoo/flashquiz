@@ -1,0 +1,137 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('./fonts/Inter/static/Inter_18pt-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  src: url('./fonts/Roboto_Condensed/static/RobotoCondensed-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('./fonts/Open_Sans/static/OpenSans-Medium.ttf');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(238, 238, 238);
+}
+
+header {
+  padding: 10px;
+  background-color: pink;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  border-bottom:  1px solid rgb(245, 182, 193);
+}
+
+nav {
+  display: flex;
+  justify-content: start;
+}
+
+nav h2 {
+  margin: 15px 0 15px 20px;  
+  font-family: 'Inter';
+}
+
+.hero {
+  padding: 25px;
+  font-family: 'Roboto Condensed';
+  background-color: pink;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  gap: 10px;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-img {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-img img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.hero h1 {
+  margin: 15px 0;
+}
+
+.hero p {
+  margin: 15px 0;
+}
+
+.hero button {
+  background-color: tomato;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100px;
+  color: white;
+  font-family: 'Inter';
+  cursor: pointer;
+}
+
+.hero button:hover {
+  background-color: rgb(201, 59, 34);
+}
+
+.sponsor {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+main.home-page h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: 'Open Sans';
+}
+
+@media (max-width: 600px) {
+  .hero {
+    margin-top: 0px;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+
+  .hero-text button {
+    margin: 0 auto;
+  }
+
+  .hero-img {
+    grid-row: 1;
+  }
+
+  .hero p {
+    width: 80%;
+    margin: 0 auto 15px;
+  }
+}
