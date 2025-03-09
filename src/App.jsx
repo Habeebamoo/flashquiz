@@ -4,7 +4,10 @@ import {
   RouterProvider,
   createRoutesFromElements
 } from "react-router-dom";
+
 import HomePage from "./pages/HomePage";
+import QuizForm from "./pages/QuizForm";
+import NotFound from "./pages/NotFound";
 
 export default function App() {
 
@@ -12,6 +15,8 @@ export default function App() {
     createRoutesFromElements(
       <>
         <Route path="/" element={<HomePage />} />
+        <Route path="/quiz-form" element={<QuizForm />} />
+        <Route path="*" element={<NotFound />} />
       </>
     )
   )

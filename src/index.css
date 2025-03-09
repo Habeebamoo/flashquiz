@@ -22,6 +22,11 @@
   src: url('./fonts/Outfit/static/Outfit-Medium.ttf');
 }
 
+@font-face {
+  font-family: 'Outfit Small';
+  src: url('./fonts/Outfit/static/Outfit-Light.ttf');
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -82,7 +87,7 @@ nav h2 {
   margin: 15px 0;
 }
 
-.hero button {
+.hero button, .about-card button {
   background-color: tomato;
   border: none;
   border-radius: 5px;
@@ -93,7 +98,7 @@ nav h2 {
   cursor: pointer;
 }
 
-.hero button:hover {
+.hero button:hover, .about-card button:hover {
   background-color: rgb(201, 59, 34);
 }
 
@@ -151,14 +156,56 @@ main.home-page h2 {
   align-items: center;
 }
 
-.about-card button {
-  background-color: tomato;
-  border: none;
-  width: 130px;
-  border-radius: 5px;
-  color: white;
+.notfound {
+  margin-top: 100px;
+  text-align: center;
+  font-family: 'Inter';
+}
+
+.notfound a {
+  background-color: pink;
+  text-decoration: none;
   padding: 10px;
-  margin-top: 20px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 140px;
+  border-radius: 5px;
+  border: 1px solid rgb(245, 182, 193);
+  color: white;
+}
+
+.notfound a:hover {
+  background-color: rgb(223, 148, 160);
+}
+
+form {
+  width: 400px;
+  margin: 0 auto;
+  background-color: pink;
+  border: 2px solid rgb(245, 182, 193);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 50px auto 50px;
+  font-family: 'Outfit Small';
+}
+
+form h2 {
+  text-align: center;
+}
+
+form .label-container {
+  margin-bottom: 15px;
+}
+
+form input, select {
+  display: block;
+  margin-top: 5px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
 }
 
 @media (max-width: 600px) {
@@ -190,5 +237,9 @@ main.home-page h2 {
 
   .about-cards {
     grid-template-columns: 1fr;
+  }
+
+  form {
+    width: 80%;
   }
 }
