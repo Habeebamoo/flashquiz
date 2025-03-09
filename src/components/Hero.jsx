@@ -26,7 +26,7 @@ export default function Hero() {
             FlashQuiz is the ultimate destination for fun, interactive, and knowledge-packed quizzes designed for learners, trivia enthisiasts, and anyone looking to challenge themselves.
           </p>
           <button onClick={goToQuiz} style={styles}>
-            <span style={{marginRight: "5px"}}>Start</span>
+            <span style={{marginRight: "5px"}}>Get Started</span>
             <FaArrowRight />
           </button>
         </div>

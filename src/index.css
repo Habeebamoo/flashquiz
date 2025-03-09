@@ -17,6 +17,11 @@
   src: url('./fonts/Open_Sans/static/OpenSans-Medium.ttf');
 }
 
+@font-face {
+  font-family: 'Outfit';
+  src: url('./fonts/Outfit/static/Outfit-Medium.ttf');
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -44,6 +49,7 @@ nav h2 {
   padding: 25px;
   font-family: 'Roboto Condensed';
   background-color: pink;
+  border-bottom:  1px solid rgb(245, 182, 193);
 }
 
 .hero-grid {
@@ -72,11 +78,7 @@ nav h2 {
   max-width: 100%;
 }
 
-.hero h1 {
-  margin: 15px 0;
-}
-
-.hero p {
+.hero h1, .hero p {
   margin: 15px 0;
 }
 
@@ -85,7 +87,7 @@ nav h2 {
   border: none;
   border-radius: 5px;
   padding: 10px;
-  width: 100px;
+  width: 130px;
   color: white;
   font-family: 'Inter';
   cursor: pointer;
@@ -106,6 +108,57 @@ main.home-page h2 {
   text-align: center;
   margin-bottom: 20px;
   font-family: 'Open Sans';
+}
+
+.about {
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.about-cards {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  gap: 15px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.about-card {
+  background-color: pink;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid rgb(233, 170, 181);
+  font-family: 'Inter';
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.about-card p, .about-card h3 {
+  text-align: center;
+}
+
+.image-holder {
+  display: flex;
+  justify-content: space-around;
+}
+
+.image-holder ol {
+  padding: 0;
+}
+
+.image-holder .image, .about-card button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-card button {
+  background-color: tomato;
+  border: none;
+  width: 130px;
+  border-radius: 5px;
+  color: white;
+  padding: 10px;
+  margin-top: 20px;
 }
 
 @media (max-width: 600px) {
@@ -133,5 +186,9 @@ main.home-page h2 {
   .hero p {
     width: 80%;
     margin: 0 auto 15px;
+  }
+
+  .about-cards {
+    grid-template-columns: 1fr;
   }
 }
