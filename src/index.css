@@ -87,7 +87,7 @@ nav h2 {
   margin: 15px 0;
 }
 
-.hero button, .about-card button {
+.hero button, .about-card button, form button, .quiz-box .footer button {
   background-color: tomato;
   border: none;
   border-radius: 5px;
@@ -98,7 +98,7 @@ nav h2 {
   cursor: pointer;
 }
 
-.hero button:hover, .about-card button:hover {
+.hero button:hover, .about-card button:hover, form button:hover, .quiz-box .footer button:hover {
   background-color: rgb(201, 59, 34);
 }
 
@@ -150,7 +150,7 @@ main.home-page h2 {
   padding: 0;
 }
 
-.image-holder .image, .about-card button {
+.image-holder .image, .about-card button, .quiz-page, .proceed-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -206,6 +206,56 @@ form input, select {
   border: none;
   border-radius: 5px;
   width: 100%;
+}
+
+form button {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.quiz-page {
+  height: 100vh;
+}
+
+.quiz-container {
+  background-color: pink;
+  width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid rgb(245, 182, 193);
+}
+
+.stopwatch {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.stopwatch h3 {
+  margin-left: 5px;
+  font-family: 'Outfit Small';
+}
+
+.quiz-box .question {
+  font-family: 'Inter';
+  font-size: 1.2em;
+}
+
+.quiz-box .footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 30px auto 0;
+  font-family: 'Roboto Condensed';
+}
+
+.quiz-box .footer button {
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (max-width: 600px) {

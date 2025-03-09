@@ -1,4 +1,5 @@
 import { useState, useContext } from "react"
+import { useNavigate } from "react-router-dom";
 import { ACTIONS, UserContext } from "../context/UserContext";
 
 export default function QuizForm() {
@@ -9,15 +10,23 @@ export default function QuizForm() {
     category: "Science",
     difficulty: "Medium",
     questionNumber: "10",
-    optionFormat: "trueOrFalse"
+    optionFormat: "trueOrFalse",
+    minutes: "0.5",
   });
+
+  const navigate = useNavigate();
 
   const submitForm = (e) => {
     e.preventDefault();
+    const confirm = window.confirm("Are you ready to begin");
+    if(!confirm) return;
+    
     dispatch({
       type: ACTIONS.SAVE_CREDENTIALS,
       payload: form
     })
+
+    navigate("/quiz-page")
   }
 
   return (
@@ -31,6 +40,7 @@ export default function QuizForm() {
             onChange={(e) => {
               setForm(prev => ({...prev, username: e.target.value}))
             }}
+            required
           />
         </div>     
         <div className="label-container">
@@ -41,6 +51,7 @@ export default function QuizForm() {
             onChange={(e) => {
               setForm(prev => ({...prev, gender: e.target.value}))
             }}
+            required
           >
             <option value="Female">Female</option>
             <option value="Male">Male</option>
@@ -103,7 +114,23 @@ export default function QuizForm() {
             <option value="trueOrFalse">True or False</option>
           </select>
         </div>
-        <button>Submit</button>
+        <div className="label-container">
+          <label htmlFor="minutes">Minutes</label>
+          <select 
+            id="minutes"
+            value={form.minutes}
+            onChange={(e) => {
+              setForm(prev => ({...prev, minutes: e.target.value}))
+            }}
+          >
+            <option value="0.5">30 Seconds</option>
+            <option value="1">60 Seconds</option>
+            <option value="2">2 Minutes</option>
+            <option value="5">5 Minutes</option>
+            <option value="10">10 Minutes</option>
+          </select>
+        </div>
+        <button>Start Quiz</button>
       </form>
     </main>
   )
