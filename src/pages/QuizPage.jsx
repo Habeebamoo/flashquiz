@@ -38,7 +38,7 @@ export default function QuizPage() {
   const formatedSecs = seconds > 9 ? seconds : `0${seconds}`;
 
   function onFinish() {
-    
+    navigate('/end-page');
   }
 
   const handleNext = () => {
@@ -52,7 +52,11 @@ export default function QuizPage() {
           <BiSolidStopwatch size={25} color="tomato" />
           <h3>{formatedMins}:{formatedSecs}</h3>
         </div>
-        <QuizBox quizIndex={quizIndex} nextQuestion={handleNext} />
+        <QuizBox 
+          quizIndex={quizIndex} 
+          nextQuestion={handleNext} 
+          optionType="boolean"
+        />
       </div>
     </main>
   )

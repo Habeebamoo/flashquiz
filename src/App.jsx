@@ -8,6 +8,7 @@ import {
 import HomePage from "./pages/HomePage";
 import QuizForm from "./pages/QuizForm";
 import QuizPage from "./pages/QuizPage";
+import EndPage from "./pages/EndPage";
 import NotFound from "./pages/NotFound";
 
 export default function App() {
@@ -18,6 +19,7 @@ export default function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/quiz-form" element={<QuizForm />} />
         <Route path="/quiz-page" element={<QuizPage />} />
+        <Route path="/end-page" element={<EndPage />} />
         <Route path="*" element={<NotFound />} />
       </>
     )
