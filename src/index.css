@@ -322,6 +322,72 @@ footer .form button:hover {
   background-color: rgb(218, 73, 47);
 }
 
+.end-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  width: 70%;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.end-page form {
+  margin: auto auto;
+  width: auto;
+}
+
+.progress-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.progress-container h3 {
+  margin: 5px 0;
+}
+
+.progress-container button {
+  margin-top: 10px;
+}
+
+.progress-box {
+  background-color: pink;
+  margin-top: 20px;
+  width: 80%;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid rgb(233, 170, 181);
+  text-align: center;
+}
+
+.category-img {
+  background-color: pink;
+  margin-top: 20px;
+  width: 80%;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid rgb(233, 170, 181);
+  text-align: center;
+  font-family: 'Outfit Small';
+}
+
+.category-img img {
+  height: 200px;
+}
+
+.progress-box .info {
+  margin-top: 20px;
+  font-family: "Outfit Small";
+}
+
+.progress-bar {
+  max-width: 150px;
+  padding: 5px;
+  font-family: "Inter";
+  margin: 0 auto;
+}
+
 @media (max-width: 768px) {
   footer {
     grid-template-columns: 1fr 1fr;
@@ -329,6 +395,10 @@ footer .form button:hover {
 
   .about-cards {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .end-page {
+    width: 100%;
   }
 }
 
@@ -386,5 +456,23 @@ footer .form button:hover {
 
   footer button {
     width: 100%;
+  }
+
+  .end-page {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .end-page .progress-box {
+    width: 90%;
+  }
+
+  .end-page .category-img {
+    width: 90%;
+  }
+
+  .end-page form {
+    margin: 20px auto 20px;
+    width: 90%;
   }
 }
