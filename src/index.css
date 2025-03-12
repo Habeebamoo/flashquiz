@@ -45,8 +45,19 @@ nav {
   justify-content: start;
 }
 
+nav .logo {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-left: 5px;
+}
+
+nav img {
+  height: 40px;
+}
+
 nav h2 {
-  margin: 15px 0 15px 20px;  
+  margin-left: 5px;
   font-family: 'Inter';
 }
 
