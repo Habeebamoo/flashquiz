@@ -258,6 +258,69 @@ form button {
   align-items: center;
 }
 
+footer {
+  background-color: pink;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+  margin-top: 20px;
+  border-top: 1px solid rgb(233, 170, 181);
+}
+
+footer .img-box {
+  height: 100px;
+  width: 100px;
+  margin: 15px;
+}
+
+footer .img-box img {
+  max-height: 100%;
+}
+
+footer h3 {
+  font-family: 'Inter';
+} 
+
+footer .info small {
+  display: block;
+  margin: 5px 0;
+  font-family: 'Roboto Condensed';
+  color: rgb(51, 48, 48);
+}
+
+footer .form input {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  width: 100%;
+}
+
+footer .form button {
+  padding: 10px;
+  background-color: tomato;
+  border: none;
+  color: white;
+  margin-top: 10px;
+  border-radius: 5px;
+  display: block;
+  cursor: pointer;
+}
+
+footer .form button:hover {
+  background-color: rgb(218, 73, 47);
+}
+
+@media (max-width: 768px) {
+  footer {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .about-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 @media (max-width: 600px) {
   .hero {
     margin-top: 0px;
@@ -291,5 +354,26 @@ form button {
 
   form {
     width: 80%;
+  }
+
+  footer {
+    grid-template-columns: 1fr;
+  }
+
+  footer .img-box {
+    margin: 20px auto 0;
+  }
+
+  footer div {
+    text-align: center;
+  }
+
+  footer .form {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  footer button {
+    width: 100%;
   }
 }
