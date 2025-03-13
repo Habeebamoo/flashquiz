@@ -253,6 +253,23 @@ form button {
   font-size: 1.2em;
 }
 
+.quiz-box .options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.quiz-box .options button {
+  padding: 15px;
+  border: none;
+  display: block;
+  border-radius: 5px;
+  width: 100%;
+  background-color: tomato;
+  color: white;
+  font-family: 'Open Sans';
+}
+
 .quiz-box .footer {
   display: flex;
   justify-content: space-between;
@@ -474,5 +491,9 @@ footer .form button:hover {
   .end-page form {
     margin: 20px auto 20px;
     width: 90%;
+  }
+
+  .quiz-box .options {
+    grid-template-columns: 1fr;
   }
 }

@@ -69,25 +69,3 @@ export default function Main() {
     </main>
   )
 }
-
-/* 
-          <div className="about-text">
-            <p>
-              FlashQuiz offers a wide variety of topics and difficulty levels. Whether you want to brush up your knowledge, compete with friends or simply explore new subjects, FlashQuiz provides seamless, engaging and user-friendly platform
-            </p>
-            <h3 class="headers">How it works</h3>
-            <p>
-              This website is powered by the <span style={styles.redText}>Open Trivia Database</span>, a reliable and extensive source of quiz questions covering a wide range of topics and difficulty levels. it works in 4 steps
-            </p>
-            <ol>
-            <li>Select a Topic</li>
-            <li>Select your preference</li>
-            <li>Start the Quiz</li>
-            <li>Track your Progress</li>
-          </ol>
-          </div>
-          <div className="about-image">
-            <img src={image} alt="" />
-          </div>
-
-*/

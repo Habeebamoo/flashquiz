@@ -6,10 +6,28 @@ import QuizBox from "../components/QuizBox";
 export default function QuizPage() {
   const [formData, setFormData] = useState(() => JSON.parse(localStorage.getItem('user-cred')))
   const [time, setTime] = useState(formData.minutes * 60);
-  const [quizIndex, setQuizIndex] = useState(0);
+  const [quiz, setQuiz] = useState(() => JSON.parse(localStorage.getItem("quiz")))
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const noOfQuestions = formData.questionNumber;
+  const lastQuestion = currentIndex + 1 == noOfQuestions;
 
   const navigate = useNavigate();
-  
+
+  useEffect(() => {
+    const fetchQuiz = async () => {
+      try {
+        const res = await fetch("https://opentdb.com/api.php?amount=12&category=21&difficulty=hard&type=multiple");
+        const data = await res.json();
+        localStorage.setItem("quiz", JSON.stringify(data.results));
+      } catch(err) {
+        console.log("This is Error", err)
+      }
+    }
+
+    fetchQuiz();
+  }, [])
+
   useEffect(() => {
     if(time <= 0) {
       onFinish();  
@@ -42,7 +60,7 @@ export default function QuizPage() {
   }
 
   const handleNext = () => {
-    setQuizIndex(prev => prev + 1)
+    setCurrentIndex(prev => prev + 1)
   }
 
   return (
@@ -53,9 +71,11 @@ export default function QuizPage() {
           <h3>{formatedMins}:{formatedSecs}</h3>
         </div>
         <QuizBox 
-          quizIndex={quizIndex} 
+          currentIndex={currentIndex}
+          quiz={quiz}
           nextQuestion={handleNext} 
           optionType="boolean"
+          lastQuestion={lastQuestion}
         />
       </div>
     </main>
