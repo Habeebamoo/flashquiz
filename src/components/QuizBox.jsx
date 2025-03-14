@@ -3,12 +3,16 @@ import { FaArrowRight } from "react-icons/fa"
 
 export default function QuizBox(props) {
   const [options, setOptions] = useState([]);
+  const [currentQuizAnswered, setCurrentQuizAnswered] = useState(false)
 
-  const quiz = props.quiz;
   const currentIndex = props.currentIndex;
-  const currentQuiz = quiz[currentIndex];
+  const handleOption = props.handleOption;
+  const currentQuiz = props.currentQuiz
   const lastQuestion = props.lastQuestion;
-  console.log(lastQuestion)
+
+  useEffect(() => {
+    setCurrentQuizAnswered(false)
+  }, [currentQuiz])
 
   let optionArray = [];
 
@@ -46,12 +50,17 @@ export default function QuizBox(props) {
     }
   }
 
+  const clickOption = (value) => {
+    handleOption(value);
+    setCurrentQuizAnswered(true)
+  }
+
   return (
     <div className="quiz-box">
       <p className="question">{decodeHTML(currentQuiz.question)}</p>
-      <div className="options">
+      <div className={`options ${currentQuizAnswered ? "answered" : null}`}>
         {options.map(ans => {
-          return <Options value={ans} />
+          return <Options value={ans} handleOption={clickOption} />
         })}
       </div>
       <div className="footer">
@@ -67,10 +76,10 @@ export default function QuizBox(props) {
   )
 }
 
-function Options({ value }) {
+function Options({ value, handleOption }) {
   return (
     <>
-      <button>{value}</button>
+      <button onClick={() => handleOption(value)}>{value}</button>
     </>
   )
 }

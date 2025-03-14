@@ -7,7 +7,7 @@ export default function EndPage() {
   const [user, setUser] = useState(() => JSON.parse(localStorage.getItem('user-cred')));
   const [progress, setProgress] = useState(0);
 
-  const percentage = 90
+  const percentage = JSON.parse(localStorage.getItem("percentage"))
 
   useEffect(() => {
     let start = 0;
@@ -33,7 +33,7 @@ export default function EndPage() {
               styles={buildStyles({
                 pathColor: "green",
                 textColor: "green",
-                transition: "stroke-dashoffset 0.5s ease-in-out",
+                transition: "stroke-dashoffset 0.5s ease-out",
               })}   
             />
           </div>

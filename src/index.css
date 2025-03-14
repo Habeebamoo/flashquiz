@@ -259,6 +259,10 @@ form button {
   gap: 10px;
 }
 
+.quiz-box .options.answered {
+  display: none;
+}
+
 .quiz-box .options button {
   padding: 15px;
   border: none;
@@ -268,6 +272,11 @@ form button {
   background-color: tomato;
   color: white;
   font-family: 'Open Sans';
+  cursor: pointer;
+}
+
+.quiz-box .options button:hover {
+  background-color: rgb(196, 65, 41);
 }
 
 .quiz-box .footer {
