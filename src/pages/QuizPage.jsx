@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { ClipLoader } from "react-spinners";
 import { BiSolidStopwatch } from "react-icons/bi";
 import QuizBox from "../components/QuizBox";
 
@@ -33,7 +34,7 @@ export default function QuizPage() {
   useEffect(() => {
     const hasReloaded = JSON.parse(localStorage.getItem("hasReloaded"));
     if(!hasReloaded) {
-      setTimeout(() => window.location.reload(), 3000);
+      setTimeout(() => window.location.reload(), 5000);
       localStorage.setItem("hasReloaded", "true")
     }
   }, [])
@@ -97,7 +98,7 @@ export default function QuizPage() {
 
   return (
     <main className="quiz-page">
-      {pageReady &&
+      {pageReady ?
         <div className="quiz-container">
           <div className="stopwatch">
             <BiSolidStopwatch size={25} color="tomato" />
@@ -110,7 +111,9 @@ export default function QuizPage() {
             lastQuestion={lastQuestion}
             handleOption={handleOption}
           />
-        </div>
+        </div> : (
+          <ClipLoader size={40} color="tomato" />
+        )
       }
     </main>
   )

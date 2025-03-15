@@ -3,7 +3,7 @@ export function getUrl(user) {
 
   let difficulty = user.difficulty;
   let amount = user.questionNumber;
-  let type = user.optionFormat
+  let type = user.type;
   let category;
 
   if(userCategory == "Science") {

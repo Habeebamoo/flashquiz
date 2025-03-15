@@ -10,6 +10,7 @@ export default function QuizForm() {
     category: "Science",
     difficulty: "medium",
     questionNumber: "10",
+    type: "boolean",
     minutes: "0.5",
   });
   const user = JSON.parse(localStorage.getItem("user-cred"))
@@ -86,6 +87,19 @@ export default function QuizForm() {
             <option value="easy">Easy</option>
             <option value="medium">Medium</option>
             <option value="hard">Hard</option>
+          </select>
+        </div>
+        <div className="label-container">
+          <label htmlFor="type">Option Format</label>
+          <select 
+            id="type"
+            value={form.type}
+            onChange={(e) => {
+              setForm(prev => ({...prev, type: e.target.value}))
+            }}
+          >
+            <option value="boolean">True or False</option>
+            <option value="multiple">Multiple</option>
           </select>
         </div>
         <div className="label-container">

@@ -326,14 +326,22 @@ footer .info small {
   color: rgb(51, 48, 48);
 }
 
-footer .form input {
+footer .footer-form {
+  background-color: transparent;
+  padding: 0;
+  border: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+footer .footer-form input {
   padding: 10px;
   border-radius: 5px;
   border: none;
   width: 100%;
 }
 
-footer .form button {
+footer .footer-form button {
   padding: 10px;
   background-color: tomato;
   border: none;
@@ -342,9 +350,10 @@ footer .form button {
   border-radius: 5px;
   display: block;
   cursor: pointer;
+  width: 100px;
 }
 
-footer .form button:hover {
+footer .footer-form button:hover {
   background-color: rgb(218, 73, 47);
 }
 
@@ -547,7 +556,7 @@ footer .form button:hover {
     margin: 0 auto;
   }
 
-  footer button {
+  footer button, footer .footer-form button {
     width: 100%;
   }
 

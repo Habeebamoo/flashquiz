@@ -1,6 +1,15 @@
+import { useState } from "react"
 import logo from "../assets/logo.png"
 
 export default function Footer() {
+  const [email, setEmail] = useState("example@example.com");
+
+  const subscribe = () => {
+    fetch("https://getform.io/f/adrrejpa", {
+      method: "POST"
+    })
+  }
+
   return (
     <footer>
       <div className="img-box">
@@ -23,10 +32,14 @@ export default function Footer() {
       </div>
       <div>
         <h3>Subscribe to our newsletter</h3>
-        <div className="form">
-          <input type="email" />
+        <form action="https://getform.io/f/adrrejpa" method="POST" className="footer-form">
+          <input 
+            type="email" 
+            name="subscriber-email"
+            placeholder="example@gmail.com"
+          />
           <button>Subscribe</button>
-        </div>
+        </form>
       </div>
     </footer>
   )
