@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { useNavigate } from "react-router-dom";
 import { progressColor, getResult } from "../utils/progress.js";
 import { getCategoryImg } from "../utils/categoryImg.js";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
@@ -7,6 +8,8 @@ import "react-circular-progressbar/dist/styles.css"
 export default function EndPage() {
   const [user, setUser] = useState(() => JSON.parse(localStorage.getItem('user-cred')));
   const [progress, setProgress] = useState(0);
+
+  const navigate = useNavigate();
 
   const score = JSON.parse(localStorage.getItem("quizScore"));
   const noOfQuestions = user.questionNumber;
@@ -47,7 +50,9 @@ export default function EndPage() {
           <div className="info">
             <h3>Result:<span> {result}</span></h3>
             <h3>Question Passed: <span>{score} of {noOfQuestions}</span></h3>
-            <button>Check all answers</button>
+            <button
+              onClick={() => navigate("/all-answers-page")}
+            >Check all answers</button>
           </div>
         </div>
         <div className="category-img">
@@ -62,7 +67,7 @@ export default function EndPage() {
         <div className="form-box">
           <div className="label-container">
             <label htmlForor="username">Username</label>
-            <input name="username" id="username" value={user.username} />
+            <input name="username" id="username" value={user.username} disabled />
           </div>
           <div className="label-container">          
             <label htmlForor="email">E-mail</label>

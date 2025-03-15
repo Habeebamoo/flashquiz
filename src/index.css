@@ -98,7 +98,7 @@ nav h2 {
   margin: 15px 0;
 }
 
-.hero button, .about-card button, form button, .quiz-box .footer button, .progress-box .info button {
+.hero button, .about-card button, form button, .quiz-box .footer button, .progress-box .info button, .all-answers-page button {
   background-color: tomato;
   border: none;
   border-radius: 5px;
@@ -109,7 +109,7 @@ nav h2 {
   cursor: pointer;
 }
 
-.hero button:hover, .about-card button:hover, form button:hover, .quiz-box .footer button:hover, .progress-box .info button:hover {
+.hero button:hover, .about-card button:hover, form button:hover, .quiz-box .footer button:hover, .progress-box .info button:hover, .all-answers-page button:hover {
   background-color: rgb(201, 59, 34);
 }
 
@@ -379,8 +379,8 @@ footer .form button:hover {
 
 .progress-box {
   background-color: pink;
-  margin-top: 20px;
   width: 80%;
+  margin: 0 auto;
   padding: 20px;
   border-radius: 10px;
   border: 1px solid rgb(233, 170, 181);
@@ -389,15 +389,14 @@ footer .form button:hover {
 
 .category-img {
   background-color: pink;
-  margin-top: 20px;
   width: 80%;
+  margin: 20px auto 0;
   padding: 20px 20px 30px;
   border-radius: 10px;
   border: 1px solid rgb(233, 170, 181);
   text-align: center;
   font-family: 'Outfit Small';
   height: 200px;
-  width: 100%;
 }
 
 .category-img img {
@@ -422,13 +421,55 @@ footer .form button:hover {
   margin: 0 auto;
 }
 
+.all-answers-page h2 {
+  text-align: center;
+  font-family: "Inter";
+}
+
+.all-answers-page button {
+  margin: 20px auto;
+  display: block;
+}
+
+.answers {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  padding: 10px;
+}
+
+.answer {
+  background-color: pink;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-family: "Roboto Condensed";
+  border-radius: 5px;
+}
+
+.answer span.block {
+  display: block;
+  margin-top: 5px;
+  color: rgb(68, 64, 64);
+}
+
+.answer span {
+  color: green;
+  font-weight: bold;
+}
+
+@media (max-width: 1000px) {
+  .answers {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
-  footer {
+  footer, .about-cards {
     grid-template-columns: 1fr 1fr;
   }
 
-  .about-cards {
-    grid-template-columns: 1fr 1fr;
+  .answers {
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .end-page {
@@ -463,16 +504,12 @@ footer .form button:hover {
     margin: 0 auto 15px;
   }
 
-  .about-cards {
+  .about-cards, footer, .quiz-box .options, .answers {
     grid-template-columns: 1fr;
   }
 
   form {
     width: 80%;
-  }
-
-  footer {
-    grid-template-columns: 1fr;
   }
 
   footer .img-box {
@@ -497,20 +534,12 @@ footer .form button:hover {
     width: 100%;
   }
 
-  .end-page .progress-box {
-    width: 90%;
-  }
-
-  .end-page .category-img {
+  .end-page .progress-box, .end-page .category-img {
     width: 90%;
   }
 
   .end-page form {
     margin: 20px auto 20px;
     width: 90%;
-  }
-
-  .quiz-box .options {
-    grid-template-columns: 1fr;
   }
 }
