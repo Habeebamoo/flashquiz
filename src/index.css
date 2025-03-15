@@ -251,6 +251,7 @@ form button {
 .quiz-box .question {
   font-family: 'Inter', sans-serif;
   font-size: 1.2em;
+  max-width: 100%;
 }
 
 .quiz-box .options {
