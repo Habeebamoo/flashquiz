@@ -9,6 +9,7 @@ export default function Hero() {
   
   const goToQuiz = () => {
     navigate("/quiz-form")
+    localStorage.clear()
   }
 
   const styles = {
