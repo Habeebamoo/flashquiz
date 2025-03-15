@@ -6,37 +6,36 @@ import QuizBox from "../components/QuizBox";
 export default function QuizPage() {
   const [formData, setFormData] = useState(() => JSON.parse(localStorage.getItem('user-cred')))
   const [time, setTime] = useState(formData.minutes * 60);
-  const [quiz, setQuiz] = useState(() => JSON.parse(localStorage.getItem("quiz")))
-  const [currentIndex, setCurrentIndex] = useState(() => {
-    const savedIndex = localStorage.getItem("currentIndex");
-    return JSON.parse(savedIndex) || 0;
-  });
+  const [quiz, setQuiz] = useState([])
+  const [currentIndex, setCurrentIndex] = useState(0);
   const [score, setScore] = useState(() => {
     const savedScore = localStorage.getItem("quizScore");
     return JSON.parse(savedScore) || 0;
   });
+  const [pageReady, setPageReady] = useState(false);
 
   const noOfQuestions = formData.questionNumber;
-  const currentQuiz = quiz[currentIndex];
   const lastQuestion = currentIndex + 1 == noOfQuestions;
 
   const navigate = useNavigate();
 
   useEffect(() => {
-    const hasFetched = localStorage.getItem("hasFetched");
+    const storedQuiz = JSON.parse(localStorage.getItem("quiz"));
+    const storedIndex = JSON.parse(localStorage.getItem("currentIndex"));
 
-    const fetchQuiz = async () => {
-      try {
-        const res = await fetch("https://opentdb.com/api.php?amount=12&category=21&difficulty=hard&type=multiple");
-        const data = await res.json();
-        localStorage.setItem("quiz", JSON.stringify(data.results));
-        localStorage.setItem("hasFetched", "true")
-      } catch(err) {
-        console.log("This is Error", err)
-      }
+    if(storedQuiz) {
+      setQuiz(storedQuiz);
+      setCurrentIndex(storedIndex);
+      setPageReady(true)
     }
+  }, []);
 
-    if(!hasFetched) fetchQuiz();
+  useEffect(() => {
+    const hasReloaded = JSON.parse(localStorage.getItem("hasReloaded"));
+    if(!hasReloaded) {
+      setTimeout(() => window.location.reload(), 3000);
+      localStorage.setItem("hasReloaded", "true")
+    }
   }, [])
 
   useEffect(() => {
@@ -85,7 +84,6 @@ export default function QuizPage() {
       onFinish();
     } else {
       setCurrentIndex(prev => prev + 1);
-
     }
   }
 
@@ -95,22 +93,26 @@ export default function QuizPage() {
     }
   }
 
+  const currentQuiz = quiz[currentIndex]
+
   return (
     <main className="quiz-page">
-      <div className="quiz-container">
-        <div className="stopwatch">
-          <BiSolidStopwatch size={25} color="tomato" />
-          <h3>{formatedMins}:{formatedSecs}</h3>
+      {pageReady &&
+        <div className="quiz-container">
+          <div className="stopwatch">
+            <BiSolidStopwatch size={25} color="tomato" />
+            <h3>{formatedMins}:{formatedSecs}</h3>
+          </div>
+          <QuizBox 
+            currentIndex={currentIndex}
+            currentQuiz={currentQuiz}
+            nextQuestion={handleNext} 
+            optionType="boolean"
+            lastQuestion={lastQuestion}
+            handleOption={handleOption}
+          />
         </div>
-        <QuizBox 
-          currentIndex={currentIndex}
-          currentQuiz={currentQuiz}
-          nextQuestion={handleNext} 
-          optionType="boolean"
-          lastQuestion={lastQuestion}
-          handleOption={handleOption}
-        />
-      </div>
+      }
     </main>
   )
 }

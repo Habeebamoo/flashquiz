@@ -98,7 +98,7 @@ nav h2 {
   margin: 15px 0;
 }
 
-.hero button, .about-card button, form button, .quiz-box .footer button {
+.hero button, .about-card button, form button, .quiz-box .footer button, .progress-box .info button {
   background-color: tomato;
   border: none;
   border-radius: 5px;
@@ -109,7 +109,7 @@ nav h2 {
   cursor: pointer;
 }
 
-.hero button:hover, .about-card button:hover, form button:hover, .quiz-box .footer button:hover {
+.hero button:hover, .about-card button:hover, form button:hover, .quiz-box .footer button:hover, .progress-box .info button:hover {
   background-color: rgb(201, 59, 34);
 }
 
@@ -391,20 +391,28 @@ footer .form button:hover {
   background-color: pink;
   margin-top: 20px;
   width: 80%;
-  padding: 20px;
+  padding: 20px 20px 30px;
   border-radius: 10px;
   border: 1px solid rgb(233, 170, 181);
   text-align: center;
   font-family: 'Outfit Small';
+  height: 200px;
+  width: 100%;
 }
 
 .category-img img {
-  height: 200px;
+  max-height: 100%;
+  max-width: 100%;
 }
 
 .progress-box .info {
   margin-top: 20px;
   font-family: "Outfit Small";
+}
+
+.progress-box .info button {
+  width: 90%;
+  margin: 0 auto;
 }
 
 .progress-bar {

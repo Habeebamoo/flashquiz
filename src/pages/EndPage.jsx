@@ -1,13 +1,20 @@
 import { useEffect, useState } from "react"
+import { progressColor, getResult } from "../utils/progress.js";
+import { getCategoryImg } from "../utils/categoryImg.js";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css"
-import SciencePng from "../assets/Science.png"
 
 export default function EndPage() {
   const [user, setUser] = useState(() => JSON.parse(localStorage.getItem('user-cred')));
   const [progress, setProgress] = useState(0);
 
-  const percentage = JSON.parse(localStorage.getItem("percentage"))
+  const score = JSON.parse(localStorage.getItem("quizScore"));
+  const noOfQuestions = user.questionNumber;
+
+  const percentage = JSON.parse(localStorage.getItem("percentage"));
+  const color = progressColor(percentage);
+  const result = getResult(percentage);
+  const categoryImg = getCategoryImg(user)
 
   useEffect(() => {
     let start = 0;
@@ -31,21 +38,21 @@ export default function EndPage() {
               value={progress}
               text={`${Math.round(progress)}%`}
               styles={buildStyles({
-                pathColor: "green",
-                textColor: "green",
+                pathColor: color,
+                textColor: color,
                 transition: "stroke-dashoffset 0.5s ease-out",
               })}   
             />
           </div>
           <div className="info">
-            <h3>Result:<span> Passed</span></h3>
-            <h3>Question Passed: <span>13 of 20</span></h3>
+            <h3>Result:<span> {result}</span></h3>
+            <h3>Question Passed: <span>{score} of {noOfQuestions}</span></h3>
             <button>Check all answers</button>
           </div>
         </div>
         <div className="category-img">
-          <h3>Category: Science</h3>
-          <img src={SciencePng} />
+          <h3>Category: {user.category}</h3>
+          <img src={categoryImg} />
         </div>
       </section>
       <form action="https://getform.io/f/adrrejpa" method="POST">

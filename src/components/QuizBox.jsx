@@ -6,8 +6,8 @@ export default function QuizBox(props) {
   const [currentQuizAnswered, setCurrentQuizAnswered] = useState(false)
 
   const currentIndex = props.currentIndex;
-  const handleOption = props.handleOption;
   const currentQuiz = props.currentQuiz
+  const handleOption = props.handleOption;
   const lastQuestion = props.lastQuestion;
 
   useEffect(() => {
@@ -59,8 +59,8 @@ export default function QuizBox(props) {
     <div className="quiz-box">
       <p className="question">{decodeHTML(currentQuiz.question)}</p>
       <div className={`options ${currentQuizAnswered ? "answered" : null}`}>
-        {options.map(ans => {
-          return <Options value={ans} handleOption={clickOption} />
+        {options.map((ans, i) => {
+          return <Options key={i} value={ans} handleOption={clickOption} />
         })}
       </div>
       <div className="footer">

@@ -1,6 +1,7 @@
 import { useState, useContext } from "react"
 import { useNavigate } from "react-router-dom";
 import { ACTIONS, UserContext } from "../context/UserContext";
+import { getUrl } from "../utils/url";
 
 export default function QuizForm() {
   const { dispatch } = useContext(UserContext);
@@ -8,11 +9,12 @@ export default function QuizForm() {
     username: "",
     gender: "Female",
     category: "Science",
-    difficulty: "Medium",
+    difficulty: "medium",
     questionNumber: "10",
-    optionFormat: "trueOrFalse",
+    optionFormat: "boolean",
     minutes: "0.5",
   });
+  const user = JSON.parse(localStorage.getItem("user-cred"))
 
   const navigate = useNavigate();
 
@@ -26,7 +28,20 @@ export default function QuizForm() {
       payload: form
     })
 
+    fetchQuiz();
     navigate("/quiz-page")
+  }
+
+  const url = getUrl(form);
+
+  const fetchQuiz = async () => {
+    try {
+      const res = await fetch(url);
+      const data = await res.json();
+      localStorage.setItem("quiz", JSON.stringify(data.results));
+    } catch(err) {
+      console.log("This is Error", err)
+    }
   }
 
   return (
@@ -84,9 +99,9 @@ export default function QuizForm() {
               setForm(prev => ({...prev, difficulty: e.target.value}))
             }}
           >
-            <option value="Easy">Easy</option>
-            <option value="Medium">Medium</option>
-            <option value="Hard">Hard</option>
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
           </select>
         </div>
         <div className="label-container">
@@ -111,7 +126,8 @@ export default function QuizForm() {
               setForm(prev => ({...prev, optionFormat: e.target.value}))
             }}
           >
-            <option value="trueOrFalse">True or False</option>
+            <option value="boolean">True or False</option>
+            <option value="multiple">Multiple</option>
           </select>
         </div>
         <div className="label-container">
