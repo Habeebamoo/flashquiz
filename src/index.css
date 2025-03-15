@@ -409,9 +409,14 @@ footer .form button:hover {
   font-family: "Outfit Small";
 }
 
+.progress-box .info .buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 .progress-box .info button {
   width: 90%;
-  margin: 0 auto;
+  margin: 5px auto;
 }
 
 .progress-bar {
@@ -474,6 +479,10 @@ footer .form button:hover {
 
   .end-page {
     width: 100%;
+  }
+
+  .progress-box .info .buttons {
+    grid-template-columns: 1fr;
   }
 }
 

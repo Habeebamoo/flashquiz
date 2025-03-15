@@ -30,7 +30,11 @@ export default function EndPage() {
     }, 10);
 
     return () => clearInterval(interval)
-  }, [percentage])
+  }, [percentage]);
+
+  const EndQuiz = () => {
+    localStorage.clear();
+  }
 
   return (
     <main className="end-page">
@@ -50,9 +54,14 @@ export default function EndPage() {
           <div className="info">
             <h3>Result:<span> {result}</span></h3>
             <h3>Question Passed: <span>{score} of {noOfQuestions}</span></h3>
-            <button
-              onClick={() => navigate("/all-answers-page")}
-            >Check all answers</button>
+            <div className="buttons">
+              <button
+                onClick={() => navigate("/all-answers-page")}
+              >
+                View all answers
+              </button>
+              <button onClick={EndQuiz}>End Quiz</button>
+            </div>
           </div>
         </div>
         <div className="category-img">
