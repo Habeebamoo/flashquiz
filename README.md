@@ -1,12 +1,24 @@
-# React + Vite
+# FlashQuiz
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A customizable quiz application built with React, powered by the Open Trivia API.
 
-Currently, two official plugins are available:
+## 🚀 Features
+- Fetches quiz questions from [Open Trivia API](https://opentdb.com/)
+- Customizable quiz settings (category, difficulty, number of questions)
+- Tracks quiz progress and stores data in local storage
+- Simple and fast UI with Vite for production
+- Correction Page to view the right answers
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Tech Stack
 
-## Expanding the ESLint configuration
+<div align="center">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="50" alt="React Logo" style="margin: 0 10px;" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg"  width="50" alt="Vite Logo" style="margin: 0 10px;" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" width="50" alt="npm Logo" style="margin: 0 10px;" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="50" alt="Git Logo" style="margin: 0 10px;" />
+</div>
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📦 Installation
+1. Clone the repository:  
+   ```bash
+   git clone https://github.com/Habeebamoo/flashquiz.git
