@@ -107,7 +107,6 @@ export default function QuizPage() {
             currentIndex={currentIndex}
             currentQuiz={currentQuiz}
             nextQuestion={handleNext} 
-            optionType="boolean"
             lastQuestion={lastQuestion}
             handleOption={handleOption}
           />

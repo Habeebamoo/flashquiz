@@ -7,11 +7,9 @@ export default function QuizForm() {
   const { dispatch } = useContext(UserContext);
   const [form, setForm] = useState({
     username: "",
-    gender: "Female",
     category: "Science",
     difficulty: "medium",
     questionNumber: "10",
-    optionFormat: "boolean",
     minutes: "0.5",
   });
   const user = JSON.parse(localStorage.getItem("user-cred"))
@@ -59,20 +57,6 @@ export default function QuizForm() {
           />
         </div>     
         <div className="label-container">
-          <label htmlFor="gender">Gender</label>
-          <select 
-            id="gender"
-            value={form.gender}
-            onChange={(e) => {
-              setForm(prev => ({...prev, gender: e.target.value}))
-            }}
-            required
-          >
-            <option value="Female">Female</option>
-            <option value="Male">Male</option>
-          </select>
-        </div>
-        <div className="label-container">
           <label htmlFor="category">Category</label>
           <select 
             id="category"
@@ -116,19 +100,6 @@ export default function QuizForm() {
               setForm(prev => ({...prev, questionNumber: e.target.value}))
             }}
           />
-        </div>
-        <div className="label-container">
-          <label htmlFor="optionFormat">Option Type</label>
-          <select 
-            id="optionFormat"
-            value={form.optionFormat}
-            onChange={(e) => {
-              setForm(prev => ({...prev, optionFormat: e.target.value}))
-            }}
-          >
-            <option value="boolean">True or False</option>
-            <option value="multiple">Multiple</option>
-          </select>
         </div>
         <div className="label-container">
           <label htmlFor="minutes">Minutes</label>

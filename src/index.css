@@ -133,9 +133,9 @@ main.home-page h2 {
 
 .about-cards {
   display: grid;
-  grid-template-columns: 33% 33% 33%;
+  grid-template-columns: 1fr 1fr;
   gap: 15px;
-  width: 90%;
+  width: 60%;
   margin: 0 auto;
 }
 
@@ -466,11 +466,20 @@ footer .form button:hover {
   .answers {
     grid-template-columns: repeat(4, 1fr);
   }
+
+  .about-cards {
+    width: 80%;
+  }
 }
 
 @media (max-width: 768px) {
   footer, .about-cards {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .about-cards {
+    grid-template-columns: 1fr;
+    width: 80%;
   }
 
   .answers {
@@ -511,6 +520,10 @@ footer .form button:hover {
   .hero p {
     width: 80%;
     margin: 0 auto 15px;
+  }
+
+  .about-cards {
+    width: 90%;
   }
 
   .about-cards, footer, .quiz-box .options, .answers {

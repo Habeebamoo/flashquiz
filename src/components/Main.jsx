@@ -31,7 +31,6 @@ export default function Main() {
       <section className="about">
         <h2>About</h2>
         <div className="about-cards">
-
           <div className="about-card">
             <h3>Information</h3>
             <p>
@@ -41,7 +40,6 @@ export default function Main() {
               This website is powered by the <span style={styles.redText}>Open Trivia Database</span>, a reliable and extensive source of quiz questions covering a wide range of topics and difficulty levels.
             </p>
           </div>
-
           <div className="about-card">
             <h3>How it Works</h3>
             <p>This application can get started you up and running right away. Just go through this 4 steps</p>
