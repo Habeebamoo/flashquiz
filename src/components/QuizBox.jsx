@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { FaArrowRight } from "react-icons/fa"
+import { FaArrowRight } from "react-icons/fa";
 
 export default function QuizBox(props) {
   const [options, setOptions] = useState([]);

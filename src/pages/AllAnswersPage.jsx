@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import Answer from "../components/Answer"
+import Answer from "../components/Answer";
 
 export default function AllAnswersPage() {
   const quiz = JSON.parse(localStorage.getItem("quiz"));
@@ -13,7 +13,9 @@ export default function AllAnswersPage() {
       </div>
       <button
         onClick={() => navigate("/end-page")}
-      >Go Back</button>
+      >
+        Go Back
+      </button>
     </main>
   )
 }

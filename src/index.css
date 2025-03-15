@@ -63,7 +63,7 @@ nav h2 {
 
 .hero {
   padding: 25px;
-  font-family: 'Roboto Condensed';
+  font-family: 'Roboto Condensed', sans-serif;
   background-color: pink;
   border-bottom:  1px solid rgb(245, 182, 193);
 }
@@ -123,7 +123,7 @@ nav h2 {
 main.home-page h2 {
   text-align: center;
   margin-bottom: 20px;
-  font-family: 'Open Sans';
+  font-family: 'Open Sans', sans-serif;
 }
 
 .about {
@@ -199,7 +199,7 @@ form {
   border-radius: 10px;
   padding: 20px;
   margin: 50px auto 50px;
-  font-family: 'Outfit Small';
+  font-family: 'Outfit Small', sans-serif;
 }
 
 form h2 {
@@ -245,11 +245,11 @@ form button {
 
 .stopwatch h3 {
   margin-left: 5px;
-  font-family: 'Outfit Small';
+  font-family: 'Outfit Small', sans-serif;
 }
 
 .quiz-box .question {
-  font-family: 'Inter';
+  font-family: 'Inter', sans-serif;
   font-size: 1.2em;
 }
 
@@ -271,7 +271,7 @@ form button {
   width: 100%;
   background-color: tomato;
   color: white;
-  font-family: 'Open Sans';
+  font-family: 'Open Sans', sans-serif;
   cursor: pointer;
 }
 
@@ -285,7 +285,7 @@ form button {
   align-items: center;
   width: 90%;
   margin: 30px auto 0;
-  font-family: 'Roboto Condensed';
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 .quiz-box .footer button {
@@ -316,13 +316,13 @@ footer .img-box img {
 }
 
 footer h3 {
-  font-family: 'Inter';
+  font-family: 'Inter', sans-serif;
 } 
 
 footer .info small {
   display: block;
   margin: 5px 0;
-  font-family: 'Roboto Condensed';
+  font-family: 'Roboto Condensed', sans-serif;
   color: rgb(51, 48, 48);
 }
 
@@ -395,7 +395,7 @@ footer .form button:hover {
   border-radius: 10px;
   border: 1px solid rgb(233, 170, 181);
   text-align: center;
-  font-family: 'Outfit Small';
+  font-family: 'Outfit Small', sans-serif;
   height: 200px;
 }
 
@@ -406,7 +406,7 @@ footer .form button:hover {
 
 .progress-box .info {
   margin-top: 20px;
-  font-family: "Outfit Small";
+  font-family: "Outfit Small", sans-serif;
 }
 
 .progress-box .info .buttons {
@@ -422,13 +422,13 @@ footer .form button:hover {
 .progress-bar {
   max-width: 150px;
   padding: 5px;
-  font-family: "Inter";
+  font-family: "Inter", sans-serif;
   margin: 0 auto;
 }
 
 .all-answers-page h2 {
   text-align: center;
-  font-family: "Inter";
+  font-family: "Inter", sans-serif;
 }
 
 .all-answers-page button {
@@ -447,7 +447,7 @@ footer .form button:hover {
   background-color: pink;
   padding: 10px;
   margin-bottom: 10px;
-  font-family: "Roboto Condensed";
+  font-family: "Roboto Condensed", sans-serif;
   border-radius: 5px;
 }
 

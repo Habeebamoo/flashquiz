@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { progressColor, getResult } from "../utils/progress.js";
 import { getCategoryImg } from "../utils/categoryImg.js";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
-import "react-circular-progressbar/dist/styles.css"
+import "react-circular-progressbar/dist/styles.css";
 
 export default function EndPage() {
   const [user, setUser] = useState(() => JSON.parse(localStorage.getItem('user-cred')));
@@ -34,6 +34,7 @@ export default function EndPage() {
 
   const EndQuiz = () => {
     localStorage.clear();
+    navigate("/");
   }
 
   return (

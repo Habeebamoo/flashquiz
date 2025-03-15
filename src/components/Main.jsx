@@ -3,7 +3,6 @@ import { FaArrowRight } from "react-icons/fa";
 import { SiAdidas, SiBuiltbybit } from "react-icons/si";
 import { FaRocket, FaSpotify } from "react-icons/fa";
 import { FaMicrosoft } from "react-icons/fa";
-import image from "../assets/image.png";
 
 export default function Main() {
   const navigate = useNavigate();
