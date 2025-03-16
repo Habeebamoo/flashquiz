@@ -9,6 +9,7 @@ export default function QuizBox(props) {
   const currentQuiz = props.currentQuiz
   const handleOption = props.handleOption;
   const lastQuestion = props.lastQuestion;
+  const totalQuestions = props.totalQuestions;
 
   useEffect(() => {
     setCurrentQuizAnswered(false)
@@ -64,7 +65,7 @@ export default function QuizBox(props) {
         })}
       </div>
       <div className="footer">
-        <p>Question {currentIndex + 1} of 10</p>
+        <p>Question {currentIndex + 1} of {totalQuestions}</p>
         <button onClick={props.nextQuestion}>
           <span style={styles.button}>
             {lastQuestion ? "Finish" : "Next"}
@@ -77,9 +78,14 @@ export default function QuizBox(props) {
 }
 
 function Options({ value, handleOption }) {
+  const decodeHTML = (html) => {
+    let txt = document.createElement("textarea");
+    txt.innerHTML = html;
+    return txt.value;
+  }
   return (
     <>
-      <button onClick={() => handleOption(value)}>{value}</button>
+      <button onClick={() => handleOption(value)}>{decodeHTML(value)}</button>
     </>
   )
 }
