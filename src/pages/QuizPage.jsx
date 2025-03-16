@@ -110,9 +110,10 @@ export default function QuizPage() {
             nextQuestion={handleNext} 
             lastQuestion={lastQuestion}
             handleOption={handleOption}
+            totalQuestions={noOfQuestions}
           />
         </div> : (
-          <ClipLoader size={40} color="tomato" />
+          <ClipLoader size={50} color="tomato" />
         )
       }
     </main>
