@@ -15,7 +15,7 @@ export default function AllAnswersPage() {
     <main className="all-answers-page">
       <h2>All Answers</h2>
       <div className="answers">
-        {quiz.map(obj => <Answer question={decodeHTML(obj.question)} answer={obj.correct_answer} />)}
+        {quiz.map((obj, index) => <Answer question={decodeHTML(obj.question)} answer={decodeHTML(obj.correct_answer)} index={index} />)}
       </div>
       <button
         onClick={() => navigate("/end-page")}
