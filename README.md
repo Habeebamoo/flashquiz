@@ -9,7 +9,7 @@ A customizable quiz application built with React, powered by the Open Trivia API
 - Simple and fast UI with Vite for production
 - Correction Page to view the right answers
 
-## 🛠️ Tech Stack
+## 🛠️ Built with 
 
 <div align="center">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="50" alt="React Logo" style="margin: 0 10px;" />
