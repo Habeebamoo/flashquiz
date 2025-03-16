@@ -116,7 +116,7 @@ export default function QuizForm() {
           />
         </div>
         <div className="label-container">
-          <label htmlFor="minutes">Minutes</label>
+          <label htmlFor="minutes">Time</label>
           <select 
             id="minutes"
             value={form.minutes}
@@ -129,6 +129,7 @@ export default function QuizForm() {
             <option value="2">2 Minutes</option>
             <option value="5">5 Minutes</option>
             <option value="10">10 Minutes</option>
+            <option value="20">20 Minutes</option>
           </select>
         </div>
         <button>Start Quiz</button>
