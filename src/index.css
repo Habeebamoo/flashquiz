@@ -542,7 +542,8 @@ footer .footer-form button:hover {
   }
 
   form {
-    width: 90%;
+    margin-top: 50px;
+    width: 95%;
   }
 
   footer .img-box {
