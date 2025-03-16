@@ -265,8 +265,9 @@ form button {
 }
 
 .quiz-box .options button {
-  padding: 15px;
+  padding: 20px;
   border: none;
+  margin-bottom: 5px;
   display: block;
   border-radius: 5px;
   width: 100%;
