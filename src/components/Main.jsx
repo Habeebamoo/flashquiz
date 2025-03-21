@@ -21,14 +21,12 @@ export default function Main() {
   return (
     <main className="home-page">
       <h2>Our Sponsors</h2>
-
       <section className="sponsor">
         <SiAdidas size={70} />
         <FaSpotify size={60} />
         <FaMicrosoft size={60} />
         <SiBuiltbybit size={60} />
       </section>
-
       <section className="about">
         <h2>About</h2>
         <div className="about-cards">
