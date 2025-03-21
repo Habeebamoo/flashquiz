@@ -265,7 +265,7 @@ form button {
 }
 
 .quiz-box .options button {
-  padding: 20px;
+  padding: 10px;
   border: none;
   margin-bottom: 5px;
   display: block;
@@ -539,6 +539,10 @@ footer .footer-form button:hover {
 
   .about-cards, footer, .quiz-box .options, .answers {
     grid-template-columns: 1fr;
+  }
+
+  .quiz-box .options button {
+    padding: 20px;
   }
 
   form {

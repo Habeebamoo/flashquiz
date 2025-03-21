@@ -59,7 +59,7 @@ export default function Main() {
             </div>
             <button onClick={goToQuiz} style={styles.button}>
               <span style={{marginRight: "5px"}}>Get Started</span>
-                <FaArrowRight />
+              <FaArrowRight />
             </button>
             </div>
         </div>
