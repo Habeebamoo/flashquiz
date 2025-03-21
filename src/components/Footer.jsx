@@ -4,12 +4,6 @@ import logo from "../assets/logo.png"
 export default function Footer() {
   const [email, setEmail] = useState("example@example.com");
 
-  const subscribe = () => {
-    fetch("https://getform.io/f/adrrejpa", {
-      method: "POST"
-    })
-  }
-
   return (
     <footer>
       <div className="img-box">
