@@ -61,7 +61,7 @@ export default function EndPage() {
               >
                 View all answers
               </button>
-              <button onClick={EndQuiz}>End Quiz</button>
+              <button onClick={EndQuiz} class="endquiz">End Quiz</button>
             </div>
           </div>
         </div>
