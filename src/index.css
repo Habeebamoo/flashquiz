@@ -541,6 +541,10 @@ footer .footer-form button:hover {
     grid-template-columns: 1fr;
   }
 
+  .answer {
+    margin-bottom: 5px;
+  }
+
   .quiz-box .options button {
     padding: 20px;
   }
