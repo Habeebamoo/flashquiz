@@ -368,6 +368,10 @@ footer .footer-form button:hover {
   padding: 10px;
 }
 
+button.endquiz {
+  background-color: red;
+}
+
 .end-page form {
   margin: auto auto;
   width: auto;
