@@ -368,11 +368,11 @@ footer .footer-form button:hover {
   padding: 10px;
 }
 
-button.endquiz {
+.endquiz {
   background-color: red;
 }
 
-button.viewallans {
+.viewallans {
   background-color: green;
 }
 
