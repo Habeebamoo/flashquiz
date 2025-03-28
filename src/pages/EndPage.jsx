@@ -58,10 +58,11 @@ export default function EndPage() {
             <div className="buttons">
               <button
                 onClick={() => navigate("/all-answers-page")}
+                className="viewallans"
               >
                 View all answers
               </button>
-              <button onClick={EndQuiz} class="endquiz">End Quiz</button>
+              <button onClick={EndQuiz} className="endquiz">End Quiz</button>
             </div>
           </div>
         </div>
