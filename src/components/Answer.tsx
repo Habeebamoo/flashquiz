@@ -1,5 +1,11 @@
-export default function Answer({ question, answer, index}) {
-  const decodeHTML = (html) => {
+interface PropsType {
+  question: string,
+  answer: string,
+  index: number
+}
+
+export default function Answer({ question, answer, index }: PropsType) {
+  const decodeHTML = (html: any) => {
     let txt = document.createElement("textarea");
     txt.innerHTML = html;
     return txt.value;

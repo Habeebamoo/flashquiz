@@ -1,10 +1,7 @@
 import { useNavigate } from "react-router-dom"
-import { useState } from "react";
-import { heroImage } from "../utils/hero";
 import { FaArrowRight } from "react-icons/fa";
 
 export default function Hero() {
-  const [image, setImage] = useState(() => heroImage())
   const navigate = useNavigate();
   
   const goToQuiz = () => {
@@ -32,7 +29,6 @@ export default function Hero() {
           </button>
         </div>
         <div className="hero-img">
-          <img src={image} />
         </div>
       </div>
     </section>

@@ -1,4 +1,10 @@
-export function getUrl(user) {
+export function getUrl() {
+  const user = {
+    category: "ge",
+    difficulty: 1,
+    questionNumber: 1,
+    type: "st"
+  }
   const userCategory = user.category;
 
   let difficulty = user.difficulty;
