@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "inter";
+  src: url("./fonts/Inter/static/Inter_18pt-Medium.ttf");
+}
+
+@utility flex-center {
+  @apply flex justify-center items-center;
+}
+
+@utility flex-start {
+  @apply flex justify-start items-center;
+}
+
+@utility flex-end {
+  @apply flex justify-end items-center;
+}
+
+@utility flex-between {
+  @apply flex justify-between items-center;
+}
+
+.test {
+  color: rgb(233, 231, 231);
+}
+
+@theme {
+  --font-inter: "inter";
+  --color-secondary: rgb(76, 77, 78);
+  --color-tetiary: rgb(243, 243, 243);
+  --color-accent: rgb(233, 231, 231)
+}
