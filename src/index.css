@@ -45,7 +45,7 @@
 }
 
 .test {
-  color: rgb(136, 136, 136);
+  color: rgb(240, 240, 240);
 }
 
 @theme {
@@ -56,4 +56,6 @@
   --color-tetiary: rgb(243, 243, 243);
   --color-accent: rgb(233, 231, 231);
   --color-accentLight: rgb(136, 136, 136);
+  --color-accentXlight: rgb(247, 247, 247);
+  --color-accentCold: rgb(240, 240, 240);
 }

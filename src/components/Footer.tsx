@@ -13,7 +13,7 @@ export default function Footer() {
   }
 
   return (
-    <footer className="p-2">
+    <footer className="p-2 bg-accentXlight">
       <div className="flex-start mt-3">
         <img src={logo} className="h-[30px]" />
         <h2>FlashQuiz</h2>
