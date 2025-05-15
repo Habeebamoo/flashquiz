@@ -9,7 +9,7 @@ const Header = () => {
         <h1 className="ml-1">FlashQuiz</h1>
       </div>
       <div>
-        <NavLink to={"/login"} className="py-2 px-5 bg-black text-white rounded-md cursor-pointer hover:text-black hover:bg-transparent border-1 border-black">Login</NavLink>
+        <NavLink to={"/login"} className="btn-black">Login</NavLink>
       </div>
     </header>
   )

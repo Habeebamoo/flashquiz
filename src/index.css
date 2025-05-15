@@ -5,6 +5,17 @@
   src: url("./fonts/Inter/static/Inter_18pt-Medium.ttf");
 }
 
+@font-face {
+  font-family: "open";
+  src: url("./fonts/Open_Sans/static/OpenSans-Medium.ttf");
+}
+
+@layer base {
+  small {
+    @apply block text-secondary mb-1
+  }
+}
+
 @utility flex-center {
   @apply flex justify-center items-center;
 }
@@ -21,13 +32,28 @@
   @apply flex justify-between items-center;
 }
 
+@utility btn-white {
+  @apply py-2 px-5 text-black rounded-md cursor-pointer hover:text-white hover:bg-black border-1 border-black inline-block;
+}
+
+@utility btn-white-full {
+  @apply p-2 text-black rounded-md cursor-pointer hover:text-white hover:bg-black border-1 border-black block text-center w-full;
+}
+
+@utility btn-black {
+  @apply py-2 px-5 bg-black text-white rounded-md cursor-pointer hover:text-black hover:bg-transparent border-1 border-black;
+}
+
 .test {
-  color: rgb(233, 231, 231);
+  color: rgb(136, 136, 136);
 }
 
 @theme {
   --font-inter: "inter";
+  --font-open: "open";
   --color-secondary: rgb(76, 77, 78);
+  --color-thinBlack: rgb(22, 22, 22);
   --color-tetiary: rgb(243, 243, 243);
-  --color-accent: rgb(233, 231, 231)
+  --color-accent: rgb(233, 231, 231);
+  --color-accentLight: rgb(136, 136, 136);
 }
