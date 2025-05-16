@@ -1,7 +1,14 @@
 import Header from "../components/Header"
 import google from "../assets/google.png"
+import { useNavigate } from "react-router-dom"
 
 const LoginPage = () => {
+  const navigate = useNavigate()
+  
+  const handleLogin = () => {
+    navigate("/dashboard")
+  }
+
   return (
     <main className="bg-accentXlight h-[100vh]">
       <Header button={false} />
@@ -13,7 +20,7 @@ const LoginPage = () => {
             className="flex justify-center items-center p-2 border-1 border-accentCold my-4 rounded-full w-[90%] block mx-auto cursor-pointer"
           >
             <img src={google} className="h-7" />
-            <span className="ml-2">Sign in with Google</span>
+            <span className="ml-2" onClick={handleLogin}>Sign in with Google</span>
           </div>
           <p className="text-secondary text-[12px] text-center">By proceeding, you agree to our Terms of services and Privacy Policy</p>
         </div>
