@@ -13,7 +13,7 @@ export default function Footer() {
   }
 
   return (
-    <footer className="p-2 bg-accentXlight">
+    <footer className="p-2 bg-accentXlight border-t-1 border-t-accentCold">
       <div className="flex-start mt-3">
         <img src={logo} className="h-[30px]" />
         <h2>FlashQuiz</h2>
@@ -37,7 +37,7 @@ export default function Footer() {
         </div>
         <div className="">
           <h3 className="text-center mb-3 text-lg font-inter">Subscribe to our newsletter</h3>
-          <form className="flex-center px-4 relative">
+          <form className="flex-center px-4 relative p-2">
             <input 
               type="email" 
               name="subscriber-email"

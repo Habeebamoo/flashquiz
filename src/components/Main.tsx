@@ -19,7 +19,7 @@ const Main = () => {
       <div>
         <h1 className="text-2xl font-inter text-center mt-6">Featured Quiz</h1>
         <p className="text-secondary mb-2 text-center">Explore our most popular and trending quiz</p>
-        <div className="p-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="p-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 w-[90%] mx-auto">
           <div className="p-3 shadow-sm rounded-md">
             <img src={science} className="h-[200px] mx-auto mb-2" />
             <h2 className="text-xl font-inter">Science</h2>
