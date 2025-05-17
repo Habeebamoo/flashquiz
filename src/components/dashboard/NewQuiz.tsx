@@ -5,7 +5,7 @@ const NewQuiz = () => {
         <h1 className="text-center font-inter text-lg py-3">Select your Preference</h1>
         <div className="p-2">
           <label htmlFor="category" className="font-inter">Category</label>
-          <select name="category" id="category" className="w-full border-1 border-accentCold p-1 rounded-md focus:border-accentCold cursor-pointer mt-2">
+          <select name="category" id="category" className="input">
             <option value="science">Science</option>
             <option value="arts">Arts & Entertainment</option>
             <option value="anime">Anime & Manga</option>
@@ -34,6 +34,10 @@ const NewQuiz = () => {
             <option value="medium">Medium</option>
             <option value="Hard">Hard</option>
           </select>
+        </div>
+        <div className="p-2">
+          <label htmlFor="amount" className="font-inter">Amount</label>
+          <input type="number" name="amount" id="amount" className="input" min={10} max={50} />
         </div>
         <div className="p-2">
           <button className="w-full mt-1 btn-black">Start Quiz</button>
