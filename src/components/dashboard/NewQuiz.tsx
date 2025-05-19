@@ -1,48 +1,96 @@
+import React, { useState } from "react"
+
 const NewQuiz = () => {
+  const [form, setForm] = useState({
+    category: "science",
+    time: 0.5,
+    difficulty: "easy",
+    amount: 10
+  })
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    console.log(form)
+    window.location.href = "/quiz"
+  }
+
   return (
-    <main className="mt-[100px] w-[95%] sm:w-[400px] h-[100vh] mx-auto">
-      <div className="bg-white p-3 border-1 border-accentCold rounded-md">
-        <h1 className="text-center font-inter text-lg py-3">Select your Preference</h1>
-        <div className="p-2">
-          <label htmlFor="category" className="font-inter">Category</label>
-          <select name="category" id="category" className="input">
-            <option value="science">Science</option>
-            <option value="arts">Arts & Entertainment</option>
-            <option value="anime">Anime & Manga</option>
-            <option value="computers">Tech & Computers</option>
-            <option value="history">History</option>
-            <option value="mythology">Mythology</option>
-            <option value="politics">Politics</option>
-            <option value="sports">Sports</option>
-          </select>
-        </div>
-        <div className="p-2">
-          <label htmlFor="time" className="font-inter">Time</label>
-          <select name="time" id="time" className="input">
-            <option value="0.5">30 Sec</option>
-            <option value="1">1 Minutes</option>
-            <option value="2">2 Minutes</option>
-            <option value="5">5 Minutes</option>
-            <option value="10">10 Minutes</option>
-            <option value="30">30 Minutes</option>
-          </select>
-        </div>
-        <div className="p-2">
-          <label htmlFor="difficulty" className="font-inter">Difficulty</label>
-          <select name="difficulty" id="difficulty" className="input">
-            <option value="easy">Easy</option>
-            <option value="medium">Medium</option>
-            <option value="Hard">Hard</option>
-          </select>
-        </div>
-        <div className="p-2">
-          <label htmlFor="amount" className="font-inter">Amount</label>
-          <input type="number" name="amount" id="amount" className="input" min={10} max={50} />
-        </div>
-        <div className="p-2">
-          <button className="w-full mt-1 btn-black">Start Quiz</button>
-        </div>
-      </div>
+    <main>
+      <section className="flex-center bg-accentXlight h-[100vh]">
+        <form onSubmit={handleSubmit} className="bg-white p-3 border-1 border-accentCold rounded-md w-[90%] sm:w-[400px] rounded-md">
+          <h1 className="text-center font-inter text-lg py-3">Select your Preference</h1>
+          <div className="p-2">
+            <label htmlFor="category" className="font-inter">Category</label>
+            <select 
+              name="category" 
+              id="category" 
+              className="input"
+              value={form.category}
+              onChange={(e) => setForm(prev => ({...prev, category: e.target.value}))}
+              required
+            >
+              <option value="science">Science</option>
+              <option value="arts">Arts & Entertainment</option>
+              <option value="anime">Anime & Manga</option>
+              <option value="computers">Tech & Computers</option>
+              <option value="history">History</option>
+              <option value="mythology">Mythology</option>
+              <option value="politics">Politics</option>
+              <option value="sports">Sports</option>
+            </select>
+          </div>
+          <div className="p-2">
+            <label htmlFor="time" className="font-inter">Time</label>
+            <select 
+              name="time" 
+              id="time" 
+              className="input"
+              value={form.time}
+              onChange={(e) => setForm(prev => ({...prev, time: Number(e.target.value)}))}
+              required
+            >
+              <option value="30">30 Sec</option>
+              <option value="60">1 Minutes</option>
+              <option value="120">2 Minutes</option>
+              <option value="300">5 Minutes</option>
+              <option value="600">10 Minutes</option>
+              <option value="1800">30 Minutes</option>
+            </select>
+          </div>
+          <div className="p-2">
+            <label htmlFor="difficulty" className="font-inter">Difficulty</label>
+            <select 
+              name="difficulty" 
+              id="difficulty" 
+              className="input"
+              value={form.difficulty}
+              onChange={(e) => setForm(prev => ({...prev, difficulty: e.target.value}))}
+              required
+            >
+              <option value="easy">Easy</option>
+              <option value="medium">Medium</option>
+              <option value="Hard">Hard</option>
+            </select>
+          </div>
+          <div className="p-2">
+            <label htmlFor="amount" className="font-inter">Amount</label>
+            <input 
+              type="number" 
+              name="amount" 
+              id="amount" 
+              className="input" 
+              min={10} 
+              max={50} 
+              value={form.amount}
+              onChange={(e) => setForm(prev => ({...prev, amount: Number(e.target.value)}))}
+              required
+            />
+          </div>
+          <div className="p-2">
+            <button className="w-full mt-1 btn-black">Start Quiz</button>
+          </div>
+        </form>
+      </section>
     </main>
   )
 }

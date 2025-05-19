@@ -1,18 +1,15 @@
 import Header from "../components/Header"
 import google from "../assets/google.png"
-import { useNavigate } from "react-router-dom"
 
 const LoginPage = () => {
-  const navigate = useNavigate()
-  
   const handleLogin = () => {
-    navigate("/dashboard")
+    window.location.href = "/dashboard"
   }
 
   return (
     <main className="bg-accentXlight h-[100vh]">
       <Header button={false} />
-      <section className="mt-[200px]">
+      <section className="h-[100vh] flex-center">
         <div className="bg-white border-1 border-accentCold px-4 py-8 rounded-md w-[90%] sm:w-[400px] mx-auto">
           <h3 className="font-inter text-lg text-center">Welcome back</h3>
           <p className="text-secondary text-center text-sm">Sign in to your account to proceed</p>

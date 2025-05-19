@@ -6,9 +6,9 @@ const Page = () => {
     <>
       <section className="p-2 mt-[70px]">
         <p className="text-secondary text-2xl mb-5">Welcome back, Micheal</p>
-        <NavLink to={"/dashboard/new"} className="btn-black">Start new Quiz</NavLink>
+        <NavLink to={"/new"} className="btn-black">Start new Quiz</NavLink>
       </section>
-      <div className="flex-center bg-white p-2 border-3 border-accentCold mt-4 rounded-md w-[95%] mx-auto">Overview</div>
+      <div className="flex-center bg-white p-2 border-1 border-accentCold mt-4 rounded-md w-[95%] mx-auto">Overview</div>
       <section className="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-2 w-[95%] mx-auto">
         <div className="p-4 bg-white rounded-md border-1 border-accentCold">
           <h2 className="font-inter text-sm text-thinBlack">Quiz Completed</h2>

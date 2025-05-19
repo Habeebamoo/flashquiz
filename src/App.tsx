@@ -11,9 +11,10 @@ import NotFound from "./pages/NotFound";
 import Dashboard from "./pages/Dasboard";
 import DashboardPage from "./components/dashboard/Page";
 import NewQuiz from "./components/dashboard/NewQuiz";
+import Quiz from "./components/dashboard/QuizSection";
+import ResultSection from "./components/dashboard/ResultSection";
 
 export default function App() {
-
   const router = createBrowserRouter(
     createRoutesFromElements(
       <>
@@ -21,8 +22,10 @@ export default function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/dashboard" element={<Dashboard />}>
           <Route path="" element={<DashboardPage />} />
-          <Route path="new" element={<NewQuiz />} />
+          <Route path="result" element={<ResultSection />} />
         </Route>
+        <Route path="/new" element={<NewQuiz />} />
+        <Route path="/quiz" element={<Quiz />} />
         <Route path="*" element={<NotFound />} />
       </>
     )
