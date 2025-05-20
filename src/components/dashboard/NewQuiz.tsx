@@ -16,15 +16,15 @@ const NewQuiz = () => {
 
   return (
     <main>
-      <section className="flex-center bg-accentXlight h-[100vh]">
-        <form onSubmit={handleSubmit} className="bg-white p-3 border-1 border-accentCold rounded-md w-[90%] sm:w-[400px] rounded-md">
-          <h1 className="text-center font-inter text-lg py-3">Select your Preference</h1>
+      <section className="flex-center bg-accentXlight dark:bg-bodyDark h-[100vh]">
+        <form onSubmit={handleSubmit} className="bg-white dark:bg-[#333] p-3 border-1 border-accentCold dark:border-[#444] rounded-md w-[90%] sm:w-[400px] rounded-md">
+          <h1 className="text-center font-inter dark:text-white text-lg py-3">Select your Preference</h1>
           <div className="p-2">
-            <label htmlFor="category" className="font-inter">Category</label>
+            <label htmlFor="category" className="font-inter dark:text-white">Category</label>
             <select 
               name="category" 
               id="category" 
-              className="input"
+              className="input dark:border-[#555] dark:bg-white"
               value={form.category}
               onChange={(e) => setForm(prev => ({...prev, category: e.target.value}))}
               required
@@ -40,11 +40,11 @@ const NewQuiz = () => {
             </select>
           </div>
           <div className="p-2">
-            <label htmlFor="time" className="font-inter">Time</label>
+            <label htmlFor="time" className="font-inter dark:text-white">Time</label>
             <select 
               name="time" 
               id="time" 
-              className="input"
+              className="input dark:border-[#555] dark:bg-white"
               value={form.time}
               onChange={(e) => setForm(prev => ({...prev, time: Number(e.target.value)}))}
               required
@@ -58,11 +58,11 @@ const NewQuiz = () => {
             </select>
           </div>
           <div className="p-2">
-            <label htmlFor="difficulty" className="font-inter">Difficulty</label>
+            <label htmlFor="difficulty" className="font-inter dark:text-white">Difficulty</label>
             <select 
               name="difficulty" 
               id="difficulty" 
-              className="input"
+              className="input dark:border-[#555] dark:bg-white"
               value={form.difficulty}
               onChange={(e) => setForm(prev => ({...prev, difficulty: e.target.value}))}
               required
@@ -73,12 +73,12 @@ const NewQuiz = () => {
             </select>
           </div>
           <div className="p-2">
-            <label htmlFor="amount" className="font-inter">Amount</label>
+            <label htmlFor="amount" className="font-inter dark:text-white">Amount</label>
             <input 
               type="number" 
               name="amount" 
               id="amount" 
-              className="input" 
+              className="input dark:border-[#555] dark:bg-white" 
               min={10} 
               max={50} 
               value={form.amount}

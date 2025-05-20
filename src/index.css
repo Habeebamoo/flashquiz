@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @font-face {
   font-family: "inter";
   src: url("./fonts/Inter/static/Inter_18pt-Medium.ttf");
@@ -33,15 +35,15 @@
 }
 
 @utility btn-white {
-  @apply py-2 px-5 text-black rounded-md cursor-pointer hover:text-white hover:bg-black border-1 border-black inline-block;
+  @apply py-2 px-5 text-black rounded-md cursor-pointer hover:text-white hover:bg-black dark:bg-white dark:hover:bg-transparent dark:hover:border-white border-1 border-black inline-block;
 }
 
 @utility btn-white-full {
-  @apply p-2 text-black rounded-md cursor-pointer hover:text-white hover:bg-black border-1 border-black block text-center w-full;
+  @apply p-2 text-black rounded-md cursor-pointer hover:text-white hover:bg-black dark:bg-white dark:hover:bg-transparent dark:hover:border-white border-1 border-black block text-center w-full;
 }
 
 @utility btn-black {
-  @apply py-2 px-5 bg-black text-white rounded-md cursor-pointer hover:text-black hover:bg-transparent border-1 border-black;
+  @apply py-2 px-5 bg-black text-white rounded-md cursor-pointer hover:text-black dark:hover:text-accentLight dark:hover:border-[#444] hover:bg-transparent border-1 border-black;
 }
 
 @utility input {
@@ -49,7 +51,7 @@
 }
 
 .test {
-  color: rgb(37, 207, 22)
+  color: rgb(29, 30, 31)
 }
 
 @theme {
@@ -62,4 +64,5 @@
   --color-accentLight: rgb(136, 136, 136);
   --color-accentXlight: rgb(247, 247, 247);
   --color-accentCold: rgb(240, 240, 240);
+  --color-bodyDark: rgb(29, 30, 31);
 }
