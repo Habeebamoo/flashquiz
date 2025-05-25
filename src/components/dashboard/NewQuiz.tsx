@@ -16,7 +16,7 @@ const NewQuiz = () => {
 
   return (
     <main>
-      <section className="flex-center bg-accentXlight dark:bg-bodyDark h-[100vh]">
+      <section className="flex-center bg-accentXlight dark:bg-[#111] h-[100vh]">
         <form onSubmit={handleSubmit} className="bg-white dark:bg-[#333] p-3 border-1 border-accentCold dark:border-[#444] rounded-md w-[90%] sm:w-[400px] rounded-md">
           <h1 className="text-center font-inter dark:text-white text-lg py-3">Select your Preference</h1>
           <div className="p-2">

@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom"
 
 const Dashboard = () => {
   return (
-    <main className="p-2 bg-accentXlight dark:bg-bodyDark">
+    <main className="p-2 bg-accentXlight dark:bg-[#111]">
       <Header />
       <Outlet />
     </main>

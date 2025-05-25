@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 
 import HomePage from "./pages/HomePage";
-import LoginPage from "./pages/LoginPage";
+import AuthPage from "./pages/AuthPage";
 import NotFound from "./pages/NotFound";
 import Dashboard from "./pages/Dasboard";
 import DashboardPage from "./components/dashboard/Page";
@@ -20,7 +20,7 @@ export default function App() {
     createRoutesFromElements(
       <>
         <Route path="/" element={<HomePage />} />
-        <Route path="/login" element={<LoginPage />} />
+        <Route path="/login" element={<AuthPage />} />
         <Route path="/dashboard" element={<Dashboard />}>
           <Route path="" element={<DashboardPage />} />
           <Route path="result" element={<ResultSection />} />

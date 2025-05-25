@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { buildStyles, CircularProgressbar } from "react-circular-progressbar"
 import { getImage } from "../../utils/image"
 import "react-circular-progressbar/dist/styles.css"
-import { FaBook, FaCheckCircle, FaRegClock } from "react-icons/fa"
+import { FaBook, FaCheckCircle, FaHome, FaRegClock, FaSpinner } from "react-icons/fa"
 import { MdCancel } from "react-icons/md"
 import Loading from "../Loading"
 import { useNavigate } from "react-router-dom"
@@ -87,28 +87,37 @@ const ResultSection = () => {
           <h2 className="font-inter dark:text-white mt-6 max-sm:text-center">Quiz Statistics</h2>
           <div className="mt-2 flex-between">
             <div>
-              <p className="text-secondary dark:text-white">Correct answers</p>
+              <p className="text-secondary text-sm dark:text-white">Correct answers</p>
               <div className="flex-start">
                 <FaCheckCircle color="green" />
                 <p className="ml-2 font-inter dark:text-white">17/20</p>
               </div>
             </div>
             <div>
-              <p className="text-secondary dark:text-white">Incorrect answers</p>
+              <p className="text-secondary text-sm dark:text-white">Incorrect answers</p>
               <div className="flex-start">
                 <MdCancel color="red" size={20} />
                 <p className="ml-2 font-inter dark:text-white">3/20</p>
               </div>
             </div>
             <div>
-              <p className="text-secondary dark:text-white">Time Taken</p>
+              <p className="text-secondary text-sm dark:text-white">Time Taken</p>
               <div className="flex-start">
                 <FaRegClock color={clockTheme} />
                 <p className="ml-2 font-inter dark:text-white">05:23</p>
               </div>
             </div>
           </div>
-          <button className="btn-black max-sm:w-full mt-4">Retry</button>
+          <div className="mt-4 sm:flex-start items-center">
+            <button className="btn-black max-sm:w-full mt-2 flex-center">
+              <FaSpinner className="mr-2" />
+              Retry
+            </button>
+            <button className="btn-white sm:ml-2 max-sm:w-full mt-2 flex-center">
+              <FaHome className="mr-2" />
+              <span>Dashboard</span>
+            </button>
+          </div>
         </div>
 
         <div className="bg-white dark:bg-[#333] rounded-md border-1 border-accentCold dark:border-[#444] p-6 mb-3">
@@ -145,18 +154,6 @@ const ResultSection = () => {
             </div>
           </div>
           <button onClick={() => navigate("/dashboard/answers")} className="btn-black max-sm:w-full mt-3">View All</button>
-        </div>
-
-        <div className="flex-center flex-col bg-white dark:bg-[#333] rounded-md border-1 border-accentCold dark:border-[#444] p-4 mb-3">
-          <img src={getImage("science")} className="h-[200px]" />
-          <h1 className="text-2xl font-open mt-6 dark:text-white">Category: Science</h1>
-        </div>
-
-        <div className="flex-center flex-col bg-white dark:bg-[#333] rounded-md border-1 border-accentCold dark:border-[#444] p-4 mb-2">
-          <FaBook size={50} color={bookTheme} />
-          <h1 className="text-xl font-open mt-6 dark:text-white">Question Passed: 5 of 20</h1>
-          <button onClick={toInfo} className="btn-black mt-3">View All Answers</button>
-          <button onClick={toHome} className="btn-black mt-3">Back to Home</button>
         </div>
       </div>
     </section>

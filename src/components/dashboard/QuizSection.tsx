@@ -39,7 +39,7 @@ const QuizSection = () => {
   const iconTheme = theme === "light" ? "black" : "white";
 
   return (
-    <main className="flex-center bg-accentXlight dark:bg-bodyDark da h-[100vh]">
+    <main className="flex-center bg-accentXlight dark:bg-[#111] da h-[100vh]">
       <div className="bg-white dark:bg-[#333] p-5 border-1 border-accentCold dark:border-[#444] rounded-md w-[90%] sm:w-[400px] rounded-lg">
         <div className="flex-end">
           <FaStopwatch color={iconTheme} />
