@@ -17,7 +17,10 @@ const AuthPage = () => {
       <Header button={false} />
       <section className="h-[100vh] flex-center">
         <div className="bg-white border-1 border-accentCold px-4 py-8 rounded-md w-[90%] sm:w-[400px] mx-auto">
-          <h1 className="font-inter text-xl mb-6 text-center">{isLogin ? "Welcome Back" : "Create Your Free Account"}</h1>
+          <h1 className="font-inter text-xl text-center">{isLogin ? "Welcome Back" : "Create Your Free Account"}</h1>
+          <p className="text-sm text-secondary text-center mb-4">
+            {isLogin ? "Sign in back to your account to continue" : "Sign up for a free account today"}
+          </p>
           {!isLogin && <div className="mb-3">
             <label htmlFor="name" className="font-inter">Name</label>
             <input type="text" id="name" className="p-2 border-1 border-accent rounded-md block w-full mt-2" required />

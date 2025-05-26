@@ -24,49 +24,49 @@ const Main = () => {
             <img src={science} className="h-[200px] mx-auto mb-2" />
             <h2 className="text-xl font-inter">Science</h2>
             <p className="text-secondary mb-3">explore the world of science and the latest in technology with this engaging quiz</p>
-            <NavLink to={"/login"} className="btn-white-full">Start Quiz</NavLink>
+            <NavLink to={"/login"} className="btn-black-full">Start Quiz</NavLink>
           </div>
           <div className="p-3 shadow-sm rounded-sm">
-            <img src={arts} className="h-[200px] mx-auto mb-2" />
-            <h2 className="text-xl font-inter">Arts and Entertainment</h2>
+            <img src={arts} className="h-[200px] mx-auto mb-3" />
+            <h2 className="text-xl font-inter mb-1">Arts and Entertainment</h2>
             <p className="text-secondary mb-3">Celebrate creativity through painting, music, literature and expression</p>
-            <NavLink to={"/login"} className="btn-white-full">Start Quiz</NavLink>
+            <NavLink to={"/login"} className="btn-black-full">Start Quiz</NavLink>
           </div>
           <div className="p-3 shadow-sm rounded-sm">
             <img src={history} className="h-[200px] mx-auto mb-2" />
             <h2 className="text-xl font-inter">History</h2>
             <p className="text-secondary mb-3">Take a deep dive into the past and and uncover the events that shaped the world</p>
-            <NavLink to={"/login"} className="btn-white-full">Start Quiz</NavLink>
+            <NavLink to={"/login"} className="btn-black-full">Start Quiz</NavLink>
           </div>
           <div className="p-3 shadow-sm rounded-sm">
             <img src={mythology} className="h-[200px] mx-auto mb-2" />
             <h2 className="text-xl font-inter">Mythology</h2>
             <p className="text-secondary mb-3">Explore ancients legends, gods and mythical tales from every culture</p>
-            <NavLink to={"/login"} className="btn-white-full">Start Quiz</NavLink>
+            <NavLink to={"/login"} className="btn-black-full">Start Quiz</NavLink>
           </div>
           <div className="p-3 shadow-sm rounded-sm">
             <img src={anime} className="h-[200px] mx-auto mb-2" />            
             <h2 className="text-xl font-inter">Anime & Manga</h2>
             <p className="text-secondary mb-3">Enter the vibrant world of anime stories, characters and fan culture</p>
-            <NavLink to={"/login"} className="btn-white-full">Start Quiz</NavLink>
+            <NavLink to={"/login"} className="btn-black-full">Start Quiz</NavLink>
           </div>
           <div className="p-3 shadow-sm rounded-sm">
-            <img src={computers} className="h-[200px] mx-auto mb-2" /> 
+            <img src={computers} className="h-[200px] mx-auto mb-3" /> 
             <h2 className="text-xl font-inter">Tech & Computers</h2>
             <p className="text-secondary mb-3">Understand the digital world from hardware to software and beyound</p>
-            <NavLink to={"/login"} className="btn-white-full">Start Quiz</NavLink>
+            <NavLink to={"/login"} className="btn-black-full">Start Quiz</NavLink>
           </div>
           <div className="p-3 shadow-sm rounded-sm">
             <img src={sports} className="h-[200px] mx-auto mb-2" /> 
             <h2 className="text-xl font-inter">Sports</h2>
             <p className="text-secondary mb-3">Catch the thrill, passion and stories behind every game and athlete</p>
-            <NavLink to={"/login"} className="btn-white-full">Start Quiz</NavLink>
+            <NavLink to={"/login"} className="btn-black-full">Start Quiz</NavLink>
           </div>
           <div className="p-3 shadow-sm rounded-sm">
             <img src={politics} className="h-[200px] mx-auto mb-2" /> 
             <h2 className="text-xl font-inter">Politics</h2>
             <p className="text-secondary mb-3">Stay informed with the global issues, leaders and power dynamics</p>
-            <NavLink to={"/login"} className="btn-white-full">Start Quiz</NavLink>
+            <NavLink to={"/login"} className="btn-black-full">Start Quiz</NavLink>
           </div>
         </div>
       </div>

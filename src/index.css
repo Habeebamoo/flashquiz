@@ -46,6 +46,10 @@
   @apply py-2 px-5 bg-black text-white rounded-md cursor-pointer hover:text-black dark:hover:text-accentLight dark:hover:border-[#444] hover:bg-transparent border-1 border-black;
 }
 
+@utility btn-black-full {
+  @apply py-2 px-5 bg-black text-white rounded-md cursor-pointer hover:text-black dark:hover:text-accentLight dark:hover:border-[#444] hover:bg-transparent border-1 border-black block w-full text-center;
+}
+
 @utility input {
   @apply w-full border-1 border-accentCold p-2 rounded-md focus:border-accentCold cursor-pointer mt-2;
 }

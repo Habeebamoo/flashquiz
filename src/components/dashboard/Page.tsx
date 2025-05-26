@@ -1,3 +1,4 @@
+import { FaTrophy } from "react-icons/fa"
 import { IoIosArrowForward } from "react-icons/io"
 import { NavLink } from "react-router-dom"
 
@@ -70,6 +71,12 @@ const Page = () => {
             </div>
           </div>
         </div>
+      </section>
+
+      <section className="bg-white dark:bg-[#333] dark:text-white p-4 border-1 border-accentCold dark:border-[#444] mt-4 rounded-md w-[95%] mx-auto mb-4">
+        <FaTrophy className="mx-auto mb-1" size={40} color="gold" />
+        <h2 className="font-inter text-lg text-center">Leaderboard</h2>
+        <p className="text-sm text-secondary text-center dark:text-accentLight">coming soon...</p>
       </section>
     </>
   )

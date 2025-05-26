@@ -20,7 +20,7 @@ const Header = ({ button=true }: { button: boolean}) => {
     <header className="flex-between bg-white shadow-sm py-3 px-3 fixed top-0 left-0 right-0">
       <div className="flex-start p-1">
         <img src={logo} className="h-[30px]" />
-        <h1 className="ml-1 text-black dark:text-white">FlashQuiz</h1>
+        <h1 className="ml-1 text-black">FlashQuiz</h1>
       </div>
       {button &&
         <div>
