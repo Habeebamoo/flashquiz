@@ -2,7 +2,8 @@ import {
   Route,
   createBrowserRouter,
   RouterProvider,
-  createRoutesFromElements
+  createRoutesFromElements,
+  Navigate
 } from "react-router-dom";
 
 import HomePage from "./pages/HomePage";
@@ -16,18 +17,20 @@ import ResultSection from "./components/dashboard/ResultSection";
 import Answers from "./components/dashboard/Answers";
 
 export default function App() {
+  const token = JSON.parse(localStorage.getItem("flashquiz-web-token")!)
+
   const router = createBrowserRouter(
     createRoutesFromElements(
       <>
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<AuthPage />} />
-        <Route path="/dashboard" element={<Dashboard />}>
+        <Route path="/dashboard" element={token ? <Dashboard /> : <Navigate to={"/login"} />}>
           <Route path="" element={<DashboardPage />} />
           <Route path="result" element={<ResultSection />} />
           <Route path="answers" element={<Answers />} />
         </Route>
-        <Route path="/new" element={<NewQuiz />} />
-        <Route path="/quiz" element={<Quiz />} />
+        <Route path="/new" element={token ? <NewQuiz /> : <Navigate to={"/login"} />} />
+        <Route path="/quiz" element={token ? <Quiz /> : <Navigate to={"/login"} />} />
         <Route path="*" element={<NotFound />} />
       </>
     )

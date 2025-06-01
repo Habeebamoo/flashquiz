@@ -1,12 +1,16 @@
 import { FaTrophy } from "react-icons/fa"
 import { IoIosArrowForward } from "react-icons/io"
 import { NavLink } from "react-router-dom"
+import { useUser } from "../../context/UserContext"
+import { capitalize } from "../../utils/format"
 
 const Page = () => {
+  const { user } = useUser()
+
   return (
     <>
       <section className="p-2 mt-[70px]">
-        <p className="text-secondary dark:text-white text-2xl mb-5">Welcome back, Micheal</p>
+        <p className="text-secondary dark:text-white text-2xl mb-5">Welcome back, {capitalize(user.name)}</p>
         <NavLink to={"/new"} className="btn-black dark:btn-white">Start new Quiz</NavLink>
       </section>
       <div className="flex-center bg-white dark:bg-[#333] dark:text-white p-2 border-1 border-accentCold dark:border-[#444] mt-4 rounded-md w-[95%] mx-auto">Overview</div>
