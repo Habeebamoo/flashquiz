@@ -85,7 +85,7 @@ const AuthPage = () => {
     <main className="bg-accentXlight h-[100vh]">
       <Header button={false} />
       <section className="h-[100vh] flex-center">
-        <div className="bg-white border-1 border-accentCold px-4 py-8 rounded-md w-[90%] sm:w-[400px] mx-auto">
+        <form onSubmit={handleAuth} className="bg-white border-1 border-accentCold px-4 py-8 rounded-md w-[90%] sm:w-[400px] mx-auto">
           <h1 className="font-inter text-xl text-center">{isLogin ? "Welcome Back" : "Create Your Free Account"}</h1>
           <p className="text-sm text-secondary text-center mb-4">
             {isLogin ? "Sign in back to your account to continue" : "Sign up for a free account today"}
@@ -129,7 +129,7 @@ const AuthPage = () => {
             </div>
           }
           <button 
-            onClick={handleAuth} 
+            type="submit"
             className="btn-black mt-2 max-sm:w-full disabled:cursor-not-allowed disabled:opacity-40" 
             disabled={authenticating}
             >
@@ -140,7 +140,7 @@ const AuthPage = () => {
             {isLogin ? "Need an account?" : "Already have an account?"}
             <span onClick={handleAuthType} className="ml-1 text-blue-500 cursor-pointer font-inter">{isLogin ? "Sign Up" : "Login"}</span>
           </p>
-        </div>
+        </form>
       </section>
     </main>
   )
