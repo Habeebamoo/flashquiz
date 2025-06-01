@@ -1,18 +1,21 @@
 # FlashQuiz
 
-A customizable quiz application built with React, powered by the Open Trivia API.
+A customizable Quiz application that brings trivia and joy
 
 ## 🚀 Features
-- Fetches quiz questions from [Open Trivia API](https://opentdb.com/)
 - Customizable quiz settings (category, difficulty, number of questions)
-- Tracks quiz progress and stores data in local storage
-- Simple and fast UI with Vite for production
-- Correction Page to view the right answers
+- Detailed User Statistics and Quiz progress
+- Satisfying User Experince UX
+- All time Leaderboard
 
-## 🛠️ Built with 
+## 🛠️ Tech Stack
+- Frontend: ReactJS
+- Backend: Go
+- Database: PostgresSQL
 
 <div align="center">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="50" alt="React Logo" style="margin: 0 10px;" />
+  <img src="./src/assets/go.png" height="40" />
 </div>
 
 ## 📦 Installation

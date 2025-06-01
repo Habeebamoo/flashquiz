@@ -1,7 +1,6 @@
 import { NavLink } from "react-router-dom"
 import logo from "../assets/logo.png"
 import { useTheme } from "../context/ThemeContext"
-import { FaMoon, FaSun } from "react-icons/fa"
 
 const Header = ({ button=true }: { button: boolean}) => {
   const { theme, setTheme } = useTheme()
@@ -13,8 +12,6 @@ const Header = ({ button=true }: { button: boolean}) => {
       setTheme("light")
     }
   }
-
-  const iconTheme = theme === "light" ? "black" : "white";
 
   return (
     <header className="flex-between bg-white shadow-sm py-3 px-3 fixed top-0 left-0 right-0">
