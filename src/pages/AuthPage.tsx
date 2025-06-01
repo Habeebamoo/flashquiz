@@ -1,4 +1,4 @@
-import { useState } from "react"
+import React, { useState } from "react"
 import Header from "../components/Header"
 
 const AuthPage = () => {
@@ -12,7 +12,8 @@ const AuthPage = () => {
     password: ""
   })
 
-  const handleAuth = async () => {
+  const handleAuth = async (e: React.FormEvent) => {
+    e.preventDefault()
     setAuthenticating(true)
     setMessage("")
     setStatus("")
