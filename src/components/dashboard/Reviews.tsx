@@ -2,13 +2,13 @@ import { FaCheckCircle } from "react-icons/fa"
 import { MdCancel } from "react-icons/md"
 import { useNavigate } from "react-router-dom"
 
-const Answers = () => {
+const Reviews = () => {
   const navigate = useNavigate()
 
   return (
     <section className="mt-[80px]">
       <div className="text-center mt-[50px] mb-5">
-        <h1 className="text-3xl font-inter dark:text-white">Answers</h1>
+        <h1 className="text-3xl font-inter dark:text-white">Reviews</h1>
         <p className="text-secondary dark:text-white">View all correct answers</p>        
       </div>
       <div className="bg-white dark:bg-[#333] rounded-md border-1 border-accentCold dark:border-[#444] p-3">
@@ -44,4 +44,4 @@ const Answers = () => {
   )
 }
 
-export default Answers
+export default Reviews

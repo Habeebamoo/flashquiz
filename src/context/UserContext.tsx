@@ -1,6 +1,11 @@
 import { createContext, ReactNode, useContext, useEffect, useState } from "react"
 
-type User = any
+interface User {
+  userId: string,
+  name: string,
+  email: string,
+  isVerified: boolean
+}
 
 type initUserContext = {
   user: User,
@@ -29,9 +34,10 @@ export const UserProvider = ({ children }: { children: ReactNode }) => {
         const response = await res.json()
 
         if (!res.ok) {
-          localStorage.removeItem("flashquiz-web-token")    
+          localStorage.removeItem("flashquiz-web-token")   
         } else {
           setUser(response.data)
+          console.log(response.data)
         }
 
       } catch (err) {

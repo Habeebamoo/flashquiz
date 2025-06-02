@@ -7,6 +7,7 @@ import { capitalize } from "../../utils/format"
 const Page = () => {
   const { user } = useUser()
 
+  console.log(user)
   return (
     <>
       <section className="p-2 mt-[70px]">

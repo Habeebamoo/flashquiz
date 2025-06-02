@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react"
 import { buildStyles, CircularProgressbar } from "react-circular-progressbar"
-import { getImage } from "../../utils/image"
 import "react-circular-progressbar/dist/styles.css"
 import { FaBook, FaCheckCircle, FaHome, FaRegClock, FaSpinner } from "react-icons/fa"
 import { MdCancel } from "react-icons/md"

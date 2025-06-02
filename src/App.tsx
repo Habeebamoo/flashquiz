@@ -14,7 +14,7 @@ import DashboardPage from "./components/dashboard/Page";
 import NewQuiz from "./components/dashboard/NewQuiz";
 import Quiz from "./components/dashboard/QuizSection";
 import ResultSection from "./components/dashboard/ResultSection";
-import Answers from "./components/dashboard/Answers";
+import Reviews from "./components/dashboard/Reviews";
 
 export default function App() {
   const token = JSON.parse(localStorage.getItem("flashquiz-web-token")!)
@@ -27,7 +27,7 @@ export default function App() {
         <Route path="/dashboard" element={token ? <Dashboard /> : <Navigate to={"/login"} />}>
           <Route path="" element={<DashboardPage />} />
           <Route path="result" element={<ResultSection />} />
-          <Route path="answers" element={<Answers />} />
+          <Route path="answers" element={<Reviews />} />
         </Route>
         <Route path="/new" element={token ? <NewQuiz /> : <Navigate to={"/login"} />} />
         <Route path="/quiz" element={token ? <Quiz /> : <Navigate to={"/login"} />} />
