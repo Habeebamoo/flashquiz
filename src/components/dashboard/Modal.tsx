@@ -5,7 +5,7 @@ interface ModalType {
   type: "success" | "error" | "",
   showModal: React.Dispatch<React.SetStateAction<boolean>>,
   head: string,
-  body: string
+  body: string,
 }
 
 const Modal = ({ type, showModal, head, body }: ModalType) => {

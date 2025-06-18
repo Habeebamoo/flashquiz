@@ -54,7 +54,7 @@ const Verify = () => {
         {status == "error" && <MdCancel color="red" size={60} /> }
         <h1 className="font-open text-xl mt-3">{message}</h1>
         <p className="text-sm text-center">{subMessage}</p>
-        <button onClick={() => navigate("/login")} className="w-[100px] btn-black mt-4">Go Back</button>
+        <button onClick={() => navigate("/login")} className="btn-black mt-4">Go Back</button>
       </div>
     </main>
   )
