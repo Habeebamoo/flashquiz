@@ -16,7 +16,7 @@ const Modal = ({ type, showModal, head, body }: ModalType) => {
         ? <MdCancel size={60} color="red" /> 
         : <FaCheckCircle size={50} color="green" />}
         <h2 className="text-lg font-open mt-2">{head}</h2>
-        <p className="text-center">{body}</p>
+        <p className="text-center text-sm">{body}</p>
         <button onClick={() => showModal(false)} className="w-[100px] btn-black mt-3">Ok</button>
       </div>
     </section>
