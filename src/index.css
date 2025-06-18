@@ -73,6 +73,7 @@
   --font-open: "open";
   --color-secondary: rgb(76, 77, 78);
   --color-thinBlack: rgb(22, 22, 22);
+  --color-modal: rgba(0,0,0,0.5);
   --color-tetiary: rgb(243, 243, 243);
   --color-accent: rgb(233, 231, 231);
   --color-accentLight: rgb(136, 136, 136);

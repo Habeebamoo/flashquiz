@@ -37,7 +37,6 @@ export const UserProvider = ({ children }: { children: ReactNode }) => {
           localStorage.removeItem("flashquiz-web-token")   
         } else {
           setUser(response.data)
-          console.log(response.data)
         }
 
       } catch (err) {

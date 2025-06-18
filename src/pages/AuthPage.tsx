@@ -68,14 +68,21 @@ const AuthPage = () => {
           setMessage(response.message)
         }
       }
-    } catch (err) {
-      console.log(err)
+    } catch (err: any) {
+        setStatus("error")
+        if (!err.response) {
+          setMessage("No Internet Connection")
+        } else {
+          setMessage("Something went wrong.")  
+        }
     } finally {
       setAuthenticating(false)
     }
   }
 
   const handleAuthType = () => {
+    setStatus("")
+    setMessage("")
     setIsLogin(!isLogin)
   }
 

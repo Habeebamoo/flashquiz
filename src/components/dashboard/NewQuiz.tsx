@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { useUser } from "../../context/UserContext"
 
 const NewQuiz = () => {
   const [form, setForm] = useState({
